@@ -21,7 +21,7 @@ public class PaySlipTest {
     }
 
     @Test
-    public void concatenatesFullName() {
+    public void getsFullName() {
         assertThat(payslip.getName(), is("John Doe"));
     }
 
@@ -42,6 +42,17 @@ public class PaySlipTest {
         assertThat(payslip.getGrossIncome(), is("5005"));
     }
 
+    @Test
+    public void calculatesMonthlySuperannnuation_roundsDown() {
+        assertThat(payslip.getSuperannuation(), is("450"));
+    }
+
+    @Test
+    public void calculatesMonthlySuperannnuation_roundsUp() {
+        Employee newEmployee = new Employee("John", "Doe", "60055", "13", "1 March", "31 March");
+        payslip = payslipGenerator.getPayslip(newEmployee);
+        assertThat(payslip.getSuperannuation(), is("651"));
+    }
 
 }
 

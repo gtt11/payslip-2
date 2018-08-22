@@ -18,20 +18,16 @@ public class Employee {
         this.paymentEndDate = paymentEndDate;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSurname() {
-        return surname;
+    public String getFullName() {
+        return firstName + " " + surname;
     }
 
     public Float getSalary() {
         return Float.parseFloat(salary);
     }
 
-    public Integer getSuperRate() {
-        return Integer.valueOf(superRate);
+    public Float getSuperRate() {
+        return Float.parseFloat(superRate);
     }
 
     public String getPaymentStartDate() {

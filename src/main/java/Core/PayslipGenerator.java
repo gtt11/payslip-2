@@ -11,17 +11,13 @@ public class PayslipGenerator {
     }
 
     public PaySlip getPayslip(Employee employee) {
-        String fullName = getFullName(employee);
+        String fullName = employee.getFullName();
         String payPeriod = getPayPeriod(employee);
-        Integer grossIncome = getGrossIncome(employee);
-        Integer incomeTax = getIncomeTax(grossIncome);
-        Integer netIncome = getNetIncome(grossIncome, incomeTax);
-        Integer superannuation = getSuper(employee, grossIncome);
-        return new PaySlip(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
-    }
-
-    private String getFullName(Employee employee) {
-        return employee.getFirstName() + " " + employee.getSurname();
+        Integer grossMonthlyIncome = getGrossIncome(employee);
+        Integer incomeTax = getIncomeTax(grossMonthlyIncome);
+        Integer netIncome = getNetIncome(grossMonthlyIncome, incomeTax);
+        Integer superannuation = getSuper(employee, grossMonthlyIncome);
+        return new PaySlip(fullName, payPeriod, grossMonthlyIncome, incomeTax, netIncome, superannuation);
     }
 
     private String getPayPeriod(Employee employee) {
@@ -32,16 +28,17 @@ public class PayslipGenerator {
         return Math.round(employee.getSalary() / 12);
     }
 
-    private Integer getIncomeTax(Integer grossIncome) {
-        return taxCalculator.getIncomeTax(grossIncome);
+    private Integer getIncomeTax(int grossMonthlyIncome) {
+        return taxCalculator.getIncomeTax(grossMonthlyIncome);
     }
 
-    private Integer getNetIncome(Integer grossIncome, Integer incomeTax) {
+    private Integer getNetIncome(int grossMonthlyIncome, Integer incomeTax) {
         return null;
     }
 
-    private Integer getSuper(Employee employee, Integer grossIncome) {
-        return null;
+    private int getSuper(Employee employee, int grossIncome) {
+        Float superRateFraction = employee.getSuperRate() / 100;
+        return Math.round(grossIncome * superRateFraction);
     }
 
 }
