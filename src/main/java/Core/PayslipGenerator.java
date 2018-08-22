@@ -16,7 +16,7 @@ public class PayslipGenerator {
         Integer grossIncome = getGrossIncome(employee);
         Integer incomeTax = getIncomeTax(grossIncome);
         Integer netIncome = getNetIncome(grossIncome, incomeTax);
-        Integer superannuation = getSuper(grossIncome);
+        Integer superannuation = getSuper(employee, grossIncome);
         return new PaySlip(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
     }
 
@@ -28,8 +28,8 @@ public class PayslipGenerator {
         return employee.getPaymentStartDate() + " - " + employee.getPaymentEndDate();
     }
 
-    private Integer getGrossIncome(Employee employee) {
-        return null;
+    private int getGrossIncome(Employee employee) {
+        return Math.round(employee.getSalary() / 12);
     }
 
     private Integer getIncomeTax(Integer grossIncome) {
@@ -40,7 +40,7 @@ public class PayslipGenerator {
         return null;
     }
 
-    private Integer getSuper(Integer grossIncome) {
+    private Integer getSuper(Employee employee, Integer grossIncome) {
         return null;
     }
 

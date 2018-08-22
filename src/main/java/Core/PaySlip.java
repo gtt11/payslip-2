@@ -27,7 +27,7 @@ public class PaySlip {
     }
 
     public String getGrossIncome() {
-        return Integer.toString(grossIncome);
+        return String.valueOf(grossIncome);
     }
 
     public String getIncomeTax() {

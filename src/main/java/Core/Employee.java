@@ -26,8 +26,8 @@ public class Employee {
         return surname;
     }
 
-    public Integer getSalary() {
-        return Integer.valueOf(salary);
+    public Float getSalary() {
+        return Float.parseFloat(salary);
     }
 
     public Integer getSuperRate() {
