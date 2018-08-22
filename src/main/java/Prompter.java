@@ -5,6 +5,7 @@ public class Prompter {
     private TaxCalculator taxCalculator;
     private SuperannuationCalculator superCalculator;
     private Employee employee;
+    private PaySlip payslip;
 
     public Prompter(EmployeeDetailGenerator input, PayslipOutputGenerator output, TaxCalculator taxCalculator, SuperannuationCalculator superCalculator) {
         this.employeeDetailGenerator = input;
@@ -15,9 +16,10 @@ public class Prompter {
 
     public void runApplication() {
         getEmployee();
+        preparePayslip();
     }
 
-    private void getEmployee() {
+    private Employee getEmployee() {
         String firstName = employeeDetailGenerator.getFirstName();
         String surname = employeeDetailGenerator.getSurname();
         String salary = employeeDetailGenerator.getSalary();
@@ -25,6 +27,16 @@ public class Prompter {
         String paymentStartDate = employeeDetailGenerator.getPaymentStartDate();
         String paymentEndDate = employeeDetailGenerator.getPaymentEndDate();
         this.employee = new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
+    }
+
+    private void preparePayslip() {
+        String fullName = getFullName();
+        String payPeriod = getPayPeriod();
+        Integer grossIncome = getGrossIncome();
+        Integer incomeTax = getIncomeTax();
+        Integer netIncome = getNetIncome(grossIncome, incomeTax);
+        Integer superannuation = getSuper();
+        this.payslip = new PaySlip(fullName, payPeriod, grossIncome,incomeTax,netIncome,superannuation);
     }
 
 }

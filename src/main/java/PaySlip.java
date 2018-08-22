@@ -2,12 +2,12 @@ public class PaySlip {
 
     private String name;
     private String payPeriod;
-    private String grossIncome;
-    private String incomeTax;
-    private String netIncome;
-    private String superannuation;
+    private Integer grossIncome;
+    private Integer incomeTax;
+    private Integer netIncome;
+    private Integer superannuation;
 
-    public PaySlip(String name, String payPeriod, String grossIncome, String incomeTax, String netIncome, String superannuation) {
+    public PaySlip(String name, String payPeriod, Integer grossIncome, Integer incomeTax, Integer netIncome, Integer superannuation) {
         this.name = name;
         this.payPeriod = payPeriod;
         this.grossIncome = grossIncome;
