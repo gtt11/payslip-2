@@ -1,13 +1,13 @@
 public class Prompter {
 
-    private EmployeeDetailGenerator employeeDetailGenerator;
+    private EmployeeDetailGetter employeeDetailGetter;
     private PayslipGenerator payslipGenerator;
     private Employee employee;
     private PaySlip payslip;
     private PayslipPresenter payslipOutputGenerator;
 
-    public Prompter(EmployeeDetailGenerator input, PayslipPresenter output, PayslipGenerator payslipGenerator) {
-        this.employeeDetailGenerator = input;
+    public Prompter(EmployeeDetailGetter input, PayslipPresenter output, PayslipGenerator payslipGenerator) {
+        this.employeeDetailGetter = input;
         this.payslipOutputGenerator = output;
         this.payslipGenerator = payslipGenerator;
     }
@@ -19,12 +19,12 @@ public class Prompter {
     }
 
     private void getEmployee() {
-        String firstName = employeeDetailGenerator.getFirstName();
-        String surname = employeeDetailGenerator.getSurname();
-        String salary = employeeDetailGenerator.getSalary();
-        String superRate = employeeDetailGenerator.getSuperRate();
-        String paymentStartDate = employeeDetailGenerator.getPaymentStartDate();
-        String paymentEndDate = employeeDetailGenerator.getPaymentEndDate();
+        String firstName = employeeDetailGetter.getFirstName();
+        String surname = employeeDetailGetter.getSurname();
+        String salary = employeeDetailGetter.getSalary();
+        String superRate = employeeDetailGetter.getSuperRate();
+        String paymentStartDate = employeeDetailGetter.getPaymentStartDate();
+        String paymentEndDate = employeeDetailGetter.getPaymentEndDate();
         this.employee = new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 

@@ -1,4 +1,4 @@
-public interface EmployeeDetailGenerator {
+public interface EmployeeDetailGetter {
 
     String getFirstName();
 

@@ -1,4 +1,4 @@
-public class ConsoleReader implements EmployeeDetailGenerator {
+public class ConsoleReader implements EmployeeDetailGetter {
 
     public String getFirstName() {
         return "John";

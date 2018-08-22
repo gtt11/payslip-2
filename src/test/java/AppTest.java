@@ -7,7 +7,7 @@ public class AppTest {
 
     @Test
     public void createApplication() {
-        EmployeeDetailGenerator consoleReader = new ConsoleReader();
+        EmployeeDetailGetter consoleReader = new ConsoleReader();
 
         PayslipPresenter consoleWriter = new ConsoleWriter();
 
