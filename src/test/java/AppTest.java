@@ -13,9 +13,7 @@ public class AppTest {
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
 
-        SuperannuationCalculator newSuperCalculator = new SuperannuationCalculator();
-
-        Prompter newPrompter = new Prompter(consoleReader, consoleWriter, newTaxCalculator, newSuperCalculator);
+        Prompter newPrompter = new Prompter(consoleReader, consoleWriter, newTaxCalculator);
 
         newPrompter.runApplication();
 
