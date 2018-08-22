@@ -8,20 +8,25 @@ import static org.junit.Assert.assertThat;
 
 public class PaySlipTest {
 
-    private PayslipGenerator payslipGenerator;
+    private PaySlip payslip;
 
     @Before
     public void setup() {
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
-        payslipGenerator = new PayslipGenerator(newTaxCalculator);
+        PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
+        Employee newEmployee = new Employee("John", "Doe", "60050", "9", "1 March", "31 March");
+        payslip = payslipGenerator.getPayslip(newEmployee);
     }
 
     @Test
     public void concatenatesFullName() {
-        Employee newEmployee = new Employee("John", "Doe", "60050", "9", "1 March", "31 March");
-        PaySlip payslip = payslipGenerator.getPayslip(newEmployee);
         assertThat(payslip.getName(), is("John Doe"));
+    }
+
+    @Test
+    public void concatenatesPayPeriod() {
+        assertThat(payslip.getPayPeriod(), is("1 March - 31 March"));
     }
 
 

@@ -25,7 +25,7 @@ public class PayslipGenerator {
     }
 
     private String getPayPeriod(Employee employee) {
-        return null;
+        return employee.getPaymentStartDate() + " - " + employee.getPaymentEndDate();
     }
 
     private Integer getGrossIncome(Employee employee) {
