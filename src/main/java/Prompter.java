@@ -17,6 +17,7 @@ public class Prompter {
     public void runApplication() {
         getEmployee();
         preparePayslip();
+        outputPayslip();
     }
 
     private Employee getEmployee() {
@@ -37,6 +38,10 @@ public class Prompter {
         Integer netIncome = getNetIncome(grossIncome, incomeTax);
         Integer superannuation = getSuper();
         this.payslip = new PaySlip(fullName, payPeriod, grossIncome,incomeTax,netIncome,superannuation);
+    }
+
+    private void outputPayslip() {
+        payslipOutputGenerator.outputPayslip(this.payslip);
     }
 
 }
