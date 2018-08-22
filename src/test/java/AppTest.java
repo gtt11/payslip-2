@@ -10,14 +10,12 @@ public class AppTest {
         UserInterface userInterface = new ConsoleIO();
         Employee newEmployee = new Employee();
 
-
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
 
-        RateLoader superRateLoader = new JSONSuperannuationRateLoader();
-        SuperannuationCalculator newSuperCalculator = new SuperannuationCalculator(superRateLoader);
+        SuperannuationCalculator newSuperCalculator = new SuperannuationCalculator();
 
-        Prompt newPrompter = new Prompt(userInterface, newEmployee, newTaxCalculator, newSuperCalculator);
+        Prompter newPrompter = new Prompter(userInterface, newEmployee, newTaxCalculator, newSuperCalculator);
 
         newPrompter.runApplication();
 
