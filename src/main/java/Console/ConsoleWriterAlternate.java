@@ -5,13 +5,14 @@ import Core.PayslipPresenter;
 
 public class ConsoleWriterAlternate implements PayslipPresenter {
 
-    private boolean hasOutputPayslip = false;
+    private PaySlip payslip;
 
     public void outputPayslip(PaySlip payslip) {
-        this.hasOutputPayslip = true;
+        this.payslip = payslip;
     }
 
-    public boolean hasOutputPayslip() {
-        return this.hasOutputPayslip;
+    public PaySlip getPayslip() {
+        return this.payslip;
     }
+
 }

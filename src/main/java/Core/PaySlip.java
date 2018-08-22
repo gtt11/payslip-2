@@ -18,4 +18,27 @@ public class PaySlip {
         this.superannuation = superannuation;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getPayPeriod() {
+        return payPeriod;
+    }
+
+    public String getGrossIncome() {
+        return Integer.toString(grossIncome);
+    }
+
+    public String getIncomeTax() {
+        return Integer.toString(incomeTax);
+    }
+
+    public String getNetIncome() {
+        return Integer.toString(netIncome);
+    }
+
+    public String getSuperannuation() {
+        return Integer.toString(superannuation);
+    }
 }
