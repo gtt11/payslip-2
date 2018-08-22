@@ -21,15 +21,15 @@ public class PayslipGenerator {
     }
 
     private String getFullName(Employee employee) {
-        return "John Doe";
+        return employee.getFirstName() + " " + employee.getSurname();
     }
 
     private String getPayPeriod(Employee employee) {
-        return "1 March - 31 March";
+        return null;
     }
 
     private Integer getGrossIncome(Employee employee) {
-        return 5004;
+        return null;
     }
 
     private Integer getIncomeTax(Integer grossIncome) {
@@ -37,11 +37,11 @@ public class PayslipGenerator {
     }
 
     private Integer getNetIncome(Integer grossIncome, Integer incomeTax) {
-        return 4082;
+        return null;
     }
 
     private Integer getSuper(Integer grossIncome) {
-        return 450;
+        return null;
     }
 
 }

@@ -1,6 +1,5 @@
-import Console.ConsoleReaderAlternate;
 import Core.*;
-import Console.ConsoleWriterAlternate;
+import Console.*;
 import TaxCalculator.*;
 import org.junit.Test;
 
