@@ -18,7 +18,7 @@ public class Prompter {
         outputPayslip();
     }
 
-    private Employee getEmployee() {
+    private void getEmployee() {
         String firstName = employeeDetailGenerator.getFirstName();
         String surname = employeeDetailGenerator.getSurname();
         String salary = employeeDetailGenerator.getSalary();
