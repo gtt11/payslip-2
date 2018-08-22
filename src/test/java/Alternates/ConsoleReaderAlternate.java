@@ -1,4 +1,4 @@
-package Console;
+package Alternates;
 
 import Core.EmployeeDetailGetter;
 

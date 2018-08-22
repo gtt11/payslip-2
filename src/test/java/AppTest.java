@@ -1,5 +1,6 @@
+import Alternates.ConsoleReaderAlternate;
+import Alternates.ConsoleWriterAlternate;
 import Core.*;
-import Console.*;
 import TaxCalculator.*;
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ public class AppTest {
 
         // Arrange
         EmployeeDetailGetter consoleReader = new ConsoleReaderAlternate();
-        PayslipPresenter consoleWriter = new ConsoleWriterAlternate();
+        ConsoleWriterAlternate consoleWriter = new ConsoleWriterAlternate();
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
         PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
@@ -21,7 +22,7 @@ public class AppTest {
 
         // Act
         newPrompter.runApplication();
-        PaySlip paySlip = ((ConsoleWriterAlternate) consoleWriter).getPayslip();
+        PaySlip paySlip = consoleWriter.getPayslip();
 
         // Assert
         assertThat(paySlip.getName(), is("John Doe"));
