@@ -8,14 +8,13 @@ public class AppTest {
     @Test
     public void createApplication() {
         UserInterface userInterface = new ConsoleIO();
-        Employee newEmployee = new Employee();
 
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
 
         SuperannuationCalculator newSuperCalculator = new SuperannuationCalculator();
 
-        Prompter newPrompter = new Prompter(userInterface, newEmployee, newTaxCalculator, newSuperCalculator);
+        Prompter newPrompter = new Prompter(userInterface, newTaxCalculator, newSuperCalculator);
 
         newPrompter.runApplication();
 
