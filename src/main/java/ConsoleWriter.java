@@ -1,4 +1,4 @@
-public class ConsoleWriter implements PayslipOutputGenerator {
+public class ConsoleWriter implements PayslipPresenter {
 
     private boolean hasOutputPayslip = false;
 

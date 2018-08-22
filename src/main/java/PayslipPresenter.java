@@ -1,4 +1,4 @@
-public interface PayslipOutputGenerator {
+public interface PayslipPresenter {
 
     void outputPayslip(PaySlip payslip);
 

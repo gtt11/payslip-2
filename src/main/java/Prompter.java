@@ -1,15 +1,15 @@
 public class Prompter {
 
     private EmployeeDetailGenerator employeeDetailGenerator;
-    private PayslipOutputGenerator payslipOutputGenerator;
-    private TaxCalculator taxCalculator;
+    private PayslipGenerator payslipGenerator;
     private Employee employee;
     private PaySlip payslip;
+    private PayslipPresenter payslipOutputGenerator;
 
-    public Prompter(EmployeeDetailGenerator input, PayslipOutputGenerator output, TaxCalculator taxCalculator) {
+    public Prompter(EmployeeDetailGenerator input, PayslipPresenter output, PayslipGenerator payslipGenerator) {
         this.employeeDetailGenerator = input;
         this.payslipOutputGenerator = output;
-        this.taxCalculator = taxCalculator;
+        this.payslipGenerator = payslipGenerator;
     }
 
     public void runApplication() {
@@ -29,41 +29,11 @@ public class Prompter {
     }
 
     private void preparePayslip() {
-        String fullName = getFullName();
-        String payPeriod = getPayPeriod();
-        Integer grossIncome = getGrossIncome();
-        Integer incomeTax = getIncomeTax(grossIncome);
-        Integer netIncome = getNetIncome(grossIncome, incomeTax);
-        Integer superannuation = getSuper();
-        this.payslip = new PaySlip(fullName, payPeriod, grossIncome,incomeTax,netIncome,superannuation);
-    }
-
-    private String getFullName() {
-        return "John Doe";
-    }
-
-    private String getPayPeriod() {
-        return "1 March - 31 March";
-    }
-
-    private Integer getGrossIncome() {
-        return 5004;
-    }
-
-    private Integer getIncomeTax(Integer grossIncome) {
-        return taxCalculator.getIncomeTax(grossIncome);
-    }
-
-    private Integer getNetIncome(Integer grossIncome, Integer incomeTax) {
-        return 4082;
-    }
-
-    private Integer getSuper() {
-        return 450;
+        payslip = payslipGenerator.getPayslip(employee);
     }
 
     private void outputPayslip() {
-        payslipOutputGenerator.outputPayslip(this.payslip);
+        payslipOutputGenerator.outputPayslip(payslip);
     }
 
 }

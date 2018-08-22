@@ -8,12 +8,15 @@ public class AppTest {
     @Test
     public void createApplication() {
         EmployeeDetailGenerator consoleReader = new ConsoleReader();
-        PayslipOutputGenerator consoleWriter = new ConsoleWriter();
+
+        PayslipPresenter consoleWriter = new ConsoleWriter();
 
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
 
-        Prompter newPrompter = new Prompter(consoleReader, consoleWriter, newTaxCalculator);
+        PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
+
+        Prompter newPrompter = new Prompter(consoleReader, consoleWriter, payslipGenerator);
 
         newPrompter.runApplication();
 
