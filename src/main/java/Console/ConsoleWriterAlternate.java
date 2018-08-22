@@ -1,4 +1,9 @@
-public class ConsoleWriter implements PayslipPresenter {
+package Console;
+
+import Core.PaySlip;
+import Core.PayslipPresenter;
+
+public class ConsoleWriterAlternate implements PayslipPresenter {
 
     private boolean hasOutputPayslip = false;
 

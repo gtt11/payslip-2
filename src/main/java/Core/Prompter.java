@@ -1,3 +1,5 @@
+package Core;
+
 public class Prompter {
 
     private EmployeeDetailGetter employeeDetailGetter;

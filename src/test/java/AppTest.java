@@ -1,3 +1,10 @@
+import Console.ConsoleReaderAlternate;
+import Core.EmployeeDetailGetter;
+import Console.ConsoleWriterAlternate;
+import Core.PayslipPresenter;
+import Core.PayslipGenerator;
+import Core.Prompter;
+import TaxCalculator.*;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -7,9 +14,9 @@ public class AppTest {
 
     @Test
     public void createApplication() {
-        EmployeeDetailGetter consoleReader = new ConsoleReader();
+        EmployeeDetailGetter consoleReader = new ConsoleReaderAlternate();
 
-        PayslipPresenter consoleWriter = new ConsoleWriter();
+        PayslipPresenter consoleWriter = new ConsoleWriterAlternate();
 
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);

@@ -1,3 +1,7 @@
+package Core;
+
+import TaxCalculator.TaxCalculator;
+
 public class PayslipGenerator {
 
     private TaxCalculator taxCalculator;
@@ -13,7 +17,7 @@ public class PayslipGenerator {
         Integer incomeTax = getIncomeTax(grossIncome);
         Integer netIncome = getNetIncome(grossIncome, incomeTax);
         Integer superannuation = getSuper(grossIncome);
-        return new PaySlip(fullName, payPeriod, grossIncome,incomeTax,netIncome,superannuation);
+        return new PaySlip(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
     }
 
     private String getFullName(Employee employee) {

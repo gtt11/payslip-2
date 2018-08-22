@@ -1,3 +1,5 @@
+package TaxCalculator;
+
 public class TaxCalculator {
 
     private RateLoader taxRateLoader;

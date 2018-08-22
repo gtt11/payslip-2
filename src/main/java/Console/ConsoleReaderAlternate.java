@@ -1,4 +1,8 @@
-public class ConsoleReader implements EmployeeDetailGetter {
+package Console;
+
+import Core.EmployeeDetailGetter;
+
+public class ConsoleReaderAlternate implements EmployeeDetailGetter {
 
     public String getFirstName() {
         return "John";

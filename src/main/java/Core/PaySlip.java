@@ -1,3 +1,5 @@
+package Core;
+
 public class PaySlip {
 
     private String name;

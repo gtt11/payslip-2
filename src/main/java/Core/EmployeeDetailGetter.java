@@ -1,3 +1,5 @@
+package Core;
+
 public interface EmployeeDetailGetter {
 
     String getFirstName();
