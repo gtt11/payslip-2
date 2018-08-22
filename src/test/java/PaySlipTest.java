@@ -21,11 +21,6 @@ public class PaySlipTest {
     }
 
     @Test
-    public void getsFullName() {
-        assertThat(payslip.getName(), is("John Doe"));
-    }
-
-    @Test
     public void concatenatesPayPeriod() {
         assertThat(payslip.getPayPeriod(), is("1 March - 31 March"));
     }

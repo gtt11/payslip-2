@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8983ef2-a5f1-4c7b-a01b-5aaad25b82bf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PaySlipTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaySlipTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -92,24 +92,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeDetailGetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Core/EmployeeDetailGetter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PaySlipTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PaySlipTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-84">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
                 <element signature="e#813#814#0" expanded="true" />
                 <element signature="e#889#890#0" expanded="true" />
                 <element signature="e#1091#1092#0" expanded="true" />
@@ -121,10 +110,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EmployeeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PayslipGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="520">
               <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="e#1063#1064#0" expanded="true" />
@@ -428,7 +433,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ApplicationOutput/ConsoleWriterAlternate.java" />
         <option value="$PROJECT_DIR$/src/main/java/Core/PayslipPresenter.java" />
         <option value="$PROJECT_DIR$/src/test/java/PayslipGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/EmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleWriterAlternate.java" />
         <option value="$PROJECT_DIR$/src/main/java/Core/PaySlip.java" />
         <option value="$PROJECT_DIR$/src/test/java/Alternates/ConsoleWriterAlternate.java" />
@@ -436,6 +440,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Core/Prompter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Core/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/PaySlipTest.java" />
       </list>
     </option>
@@ -674,20 +679,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534898603671</updated>
-      <workItem from="1534898607446" duration="21295000" />
+      <workItem from="1534898607446" duration="21809000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_payslip-mark-2_test - 2018.08.22 at 16h 12m 51s.xml">
-      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test - 2018.08.22 at 16h 24m 56s.xml">
-      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test - 2018.08.22 at 16h 38m 40s.xml">
-      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_payslip-mark-2_test - 2018.08.22 at 16h 39m 38s.xml">
       <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
     </history-entry>
@@ -709,9 +705,18 @@
     <history-entry file="All_in_payslip-mark-2_test - 2018.08.22 at 17h 12m 37s.xml">
       <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test - 2018.08.23 at 09h 29m 41s.xml">
+      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test - 2018.08.23 at 09h 30m 06s.xml">
+      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test - 2018.08.23 at 09h 37m 59s.xml">
+      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21295000" />
+    <option name="totallyTimeSpent" value="21809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -904,6 +909,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Core/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -917,25 +933,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/EmployeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PaySlipTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
             <element signature="e#813#814#0" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#1091#1092#0" expanded="true" />
