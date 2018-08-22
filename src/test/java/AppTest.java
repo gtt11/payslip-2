@@ -7,18 +7,19 @@ public class AppTest {
 
     @Test
     public void createApplication() {
-        EmployeeDetailGenerator userInterface = new ConsoleInterface();
+        EmployeeDetailGenerator consoleReader = new ConsoleReader();
+        PayslipOutputGenerator consoleWriter = new ConsoleWriter();
 
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
 
         SuperannuationCalculator newSuperCalculator = new SuperannuationCalculator();
 
-        Prompter newPrompter = new Prompter(userInterface, newTaxCalculator, newSuperCalculator);
+        Prompter newPrompter = new Prompter(consoleReader, consoleWriter, newTaxCalculator, newSuperCalculator);
 
         newPrompter.runApplication();
 
-        assertThat(newPrompter.hasOutputPayslip(), is(true));
+        assertThat(consoleWriter.hasOutputPayslip(), is(true));
 
     }
 }
