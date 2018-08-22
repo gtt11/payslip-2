@@ -7,7 +7,7 @@ public class AppTest {
 
     @Test
     public void createApplication() {
-        UserInterface userInterface = new ConsoleIO();
+        EmployeeDetailGenerator userInterface = new ConsoleInterface();
 
         RateLoader taxRateLoader = new JSONTaxRateLoader();
         TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
