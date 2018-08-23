@@ -1,7 +1,5 @@
 package Core;
 
-import TaxCalculator.TaxCalculator;
-
 public class PayslipGenerator {
 
     private TaxCalculator taxCalculator;

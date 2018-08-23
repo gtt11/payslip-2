@@ -1,4 +1,6 @@
-package TaxCalculator;
+package Core;
+
+import DataStore.RateLoader;
 
 public class TaxCalculator {
 

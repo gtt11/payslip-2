@@ -1,0 +1,32 @@
+[
+  {
+    "bracketMin": 0,
+    "bracketMax": 18200,
+    "baseTax": 0,
+    "marginalTaxRate": 0
+  },
+  {
+    "bracketMin": 18201,
+    "bracketMax": 37000,
+    "baseTax": 0,
+    "marginalTaxRate": 19
+  },
+  {
+    "bracketMin": 37001,
+    "bracketMax": 90000,
+    "baseTax": 3572,
+    "marginalTaxRate": 32.5
+  },
+  {
+    "bracketMin": 90001,
+    "bracketMax": 180000,
+    "baseTax": 20797,
+    "marginalTaxRate": 37
+  },
+  {
+    "bracketMin": 180001,
+    "bracketMax": null,
+    "baseTax": 54097,
+    "marginalTaxRate": 45
+  }
+]
