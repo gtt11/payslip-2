@@ -1,12 +1,12 @@
 package Core;
 
-public class Prompter {
+public class Application {
 
     private EmployeeDetailGetter employeeDetailGetter;
     private PayslipGenerator payslipGenerator;
     private PayslipPresenter payslipOutputGenerator;
 
-    public Prompter(EmployeeDetailGetter input, PayslipPresenter output, PayslipGenerator payslipGenerator) {
+    public Application(EmployeeDetailGetter input, PayslipPresenter output, PayslipGenerator payslipGenerator) {
         this.employeeDetailGetter = input;
         this.payslipOutputGenerator = output;
         this.payslipGenerator = payslipGenerator;
