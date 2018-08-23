@@ -13,19 +13,9 @@ public class Prompter {
     }
 
     public void runApplication() {
-        Employee employee = getEmployee();
+        Employee employee = employeeDetailGetter.getEmployee();
         PaySlip payslip = preparePayslip(employee);
         outputPayslip(payslip);
-    }
-
-    private Employee getEmployee() {
-        String firstName = employeeDetailGetter.getFirstName();
-        String surname = employeeDetailGetter.getSurname();
-        String salary = employeeDetailGetter.getSalary();
-        String superRate = employeeDetailGetter.getSuperRate();
-        String paymentStartDate = employeeDetailGetter.getPaymentStartDate();
-        String paymentEndDate = employeeDetailGetter.getPaymentEndDate();
-        return new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 
     private PaySlip preparePayslip(Employee employee) {
