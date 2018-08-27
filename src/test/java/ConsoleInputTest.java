@@ -1,5 +1,5 @@
 import java.io.*;
-import Console.ConsolePrompter;
+import Console.*;
 import Core.Employee;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class ConsolePrompterTest {
+public class ConsoleInputTest {
 
     private ConsolePrompter consolePrompter;
     private Employee defaultEmployee;
@@ -18,27 +18,27 @@ public class ConsolePrompterTest {
     }
 
     @Test
-    public void createsEmployee_withCorrectName() {
+    public void createsEmployee_withProvidedName() {
         assertThat(defaultEmployee.getFullName(), is("John Doe"));
     }
 
     @Test
-    public void createsEmployee_withCorrectSalary() {
+    public void createsEmployee_withProvidedSalary() {
         assertThat(defaultEmployee.getSalary(), is(65000F));
     }
 
     @Test
-    public void createsEmployee_withCorrectSuperannuationRate() {
+    public void createsEmployee_withProvidedSuperannuationRate() {
         assertThat(defaultEmployee.getSuperRate(), is(9F));
     }
 
     @Test
-    public void createsEmployee_withCorrectPaymentStartDate() {
+    public void createsEmployee_withProvidedPaymentStartDate() {
         assertThat(defaultEmployee.getPaymentStartDate(), is("01 March"));
     }
 
     @Test
-    public void createsEmployee_withCorrectPaymentEndDate() {
+    public void createsEmployee_withProvidedPaymentEndDate() {
         assertThat(defaultEmployee.getPaymentEndDate(), is("31 March"));
     }
 
@@ -76,7 +76,8 @@ public class ConsolePrompterTest {
 
     public void createConsoleReader_withTestInput(String testUserInput) throws UnsupportedEncodingException {
         InputStream inputStream = new ByteArrayInputStream(testUserInput.getBytes("UTF-8"));
-        consolePrompter = new ConsolePrompter(inputStream);
+        ConsoleIO consoleIO = new ConsoleIO(inputStream);
+        consolePrompter = new ConsolePrompter(consoleIO);
         defaultEmployee = consolePrompter.getEmployee();
     }
 

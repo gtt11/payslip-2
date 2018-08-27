@@ -1,16 +1,15 @@
 package Console;
 
 import Core.*;
-import java.io.*;
 import java.text.*;
-import java.util.Scanner;
+
 
 public class ConsolePrompter implements EmployeeDetailGetter {
 
-    private Scanner in;
+    private ConsoleIO console;
 
-    public ConsolePrompter(InputStream input) {
-        this.in = new Scanner(input);
+    public ConsolePrompter(ConsoleIO console) {
+        this.console = console;
     }
 
     public Employee getEmployee() {
@@ -24,16 +23,16 @@ public class ConsolePrompter implements EmployeeDetailGetter {
     }
 
     private String requestTextInput() {
-        return in.nextLine();
+        return console.ask();
     }
 
     private String requestNumberInput() {
-        String inputValue = in.nextLine();
+        String inputValue = console.ask();
         return numericalInputIsValid(inputValue) ? inputValue : requestNumberInput();
     }
 
     private String requestDate() {
-        String inputValue = in.nextLine();
+        String inputValue = console.ask();
         return dateInputIsValid(inputValue) ? inputValue : requestDate();
     }
 
@@ -52,7 +51,7 @@ public class ConsolePrompter implements EmployeeDetailGetter {
         try {
             Float.parseFloat(inputValue);
             return true;
-        } catch(Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
