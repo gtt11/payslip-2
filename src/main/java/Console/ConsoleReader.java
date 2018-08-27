@@ -15,7 +15,11 @@ public class ConsoleReader implements EmployeeDetailGetter {
     public Employee getEmployee() {
         String firstName = requestFirstName();
         String surname = requestSurname();
-        return new Employee(firstName, surname, "65000", "9", "1 March", "30 March");
+        String salary = requestSalary();
+        String superRate = requestSuperRate();
+        String paymentStartDate = requestPaymentStartDate();
+        String paymentEndDate = requestPaymentEndDate();
+        return new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 
     private String requestFirstName() {
@@ -26,5 +30,19 @@ public class ConsoleReader implements EmployeeDetailGetter {
         return in.nextLine();
     }
 
+    private String requestSalary() {
+        return in.nextLine();
+    }
 
+    private String requestSuperRate() {
+        return in.nextLine();
+    }
+
+    private String requestPaymentStartDate() {
+        return in.nextLine();
+    }
+
+    private String requestPaymentEndDate() {
+        return in.nextLine();
+    }
 }
