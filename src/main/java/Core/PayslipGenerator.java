@@ -14,7 +14,7 @@ public class PayslipGenerator {
         String fullName = employee.getFullName();
         String payPeriod = getPayPeriod(employee);
         int grossMonthlyIncome = getGrossMonthlyIncome(employee);
-        int incomeTax = getIncomeTax(grossMonthlyIncome);
+        int incomeTax = getIncomeTax(employee);
         Integer netIncome = getNetIncome(grossMonthlyIncome, incomeTax);
         int superannuation = getSuper(employee, grossMonthlyIncome);
         return new PaySlip(fullName, payPeriod, grossMonthlyIncome, incomeTax, netIncome, superannuation);
@@ -28,8 +28,9 @@ public class PayslipGenerator {
         return Math.round(employee.getSalary() / 12);
     }
 
-    private int getIncomeTax(int grossMonthlyIncome) throws FileNotFoundException {
-        return taxCalculator.getIncomeTax(grossMonthlyIncome);
+    private int getIncomeTax(Employee employee) throws FileNotFoundException {
+        float annualSalary = employee.getSalary();
+        return taxCalculator.getMonthlyIncomeTax(annualSalary);
     }
 
     private Integer getNetIncome(int grossMonthlyIncome, int incomeTax) {

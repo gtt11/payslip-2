@@ -1,6 +1,6 @@
-import Core.TaxCalculator;
-import DataStore.JSONTaxBracketLoader;
-import org.junit.Before;
+import Core.TaxCalculator;import DataStore.JSONTaxBracketLoader;
+import
+ org.junit.Before;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -21,16 +21,39 @@ public class TaxCalculatorTest {
 
     @Test
     public void taxCalculatorTest_returnsIncomeTaxForLowestBracket() throws FileNotFoundException {
-        assertTaxOnGrossIncome(18200, 0);
+        assertMonthlyTaxOnAnnualIncome(5000, 0);
+        assertMonthlyTaxOnAnnualIncome(18200, 0);
     }
 
     @Test
     public void taxCalculatorTest_returnsIncomeTaxForSecondTaxBracket() throws FileNotFoundException {
-        assertTaxOnGrossIncome(37000, 3572);
+        assertMonthlyTaxOnAnnualIncome(18201, 0);
+        assertMonthlyTaxOnAnnualIncome(18203, 0);
+        assertMonthlyTaxOnAnnualIncome(37000, 298);
     }
 
-    private void assertTaxOnGrossIncome(int grossIncome, int expectedTax) throws FileNotFoundException {
-        int incomeTax = taxCalculator.getIncomeTax(grossIncome);
+    @Test
+    public void taxCalculatorTest_returnsIncomeTaxForThirdTaxBracket() throws FileNotFoundException {
+        assertMonthlyTaxOnAnnualIncome(37001, 298);
+        assertMonthlyTaxOnAnnualIncome(60050, 922);
+        assertMonthlyTaxOnAnnualIncome(90000, 1733);
+    }
+
+    @Test
+    public void taxCalculatorTest_returnsIncomeTaxForFourthTaxBracket() throws FileNotFoundException {
+        assertMonthlyTaxOnAnnualIncome(90024, 1734);
+        assertMonthlyTaxOnAnnualIncome(143012, 3368);
+        assertMonthlyTaxOnAnnualIncome(180000, 4508);
+    }
+
+    @Test
+    public void taxCalculatorTest_returnsIncomeTaxForHighestTaxBracket() throws FileNotFoundException {
+        assertMonthlyTaxOnAnnualIncome(180024, 4509);
+        assertMonthlyTaxOnAnnualIncome(250000, 7133);
+    }
+
+    private void assertMonthlyTaxOnAnnualIncome(int annualSalary, int expectedTax) throws FileNotFoundException {
+        int incomeTax = taxCalculator.getMonthlyIncomeTax(annualSalary);
         assertThat(incomeTax, is(expectedTax));
     }
 }
