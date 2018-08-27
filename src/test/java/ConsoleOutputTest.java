@@ -23,13 +23,34 @@ public class ConsoleOutputTest {
 
     @Test
     public void consoleOutputsEmployeeName_fromProvidedPaySlip() {
-        assertThat(consoleOutput.toString().contains("Name: John Doe"), is(true));
+        assertConsoleOutput("Name: John Doe");
     }
 
     @Test
     public void consoleOutputsPayDateRange_fromProvidedPaySlip() {
-        assertThat(consoleOutput.toString().contains("Pay Period: 01 March - 31 March"), is(true));
+        assertConsoleOutput("Pay Period: 01 March - 31 March");
     }
 
+    @Test
+    public void consoleOutputsGrossIncome_fromProvidedPaySlip() {
+        assertConsoleOutput("Gross Income: 5004");
+    }
+
+    @Test
+    public void consoleOutputsIncomeTax_fromProvidedPaySlip() {
+        assertConsoleOutput("Income Tax: 922");
+    }
+    @Test
+    public void consoleOutputsNetIncome_fromProvidedPaySlip() {
+        assertConsoleOutput("Net Income: 4082");
+    }
+    @Test
+    public void consoleOutputsSuperannuation_fromProvidedPaySlip() {
+        assertConsoleOutput("Super: 450");
+    }
+
+    private void assertConsoleOutput(String expectedValue) {
+        assertThat(consoleOutput.toString().contains(expectedValue), is(true));
+    }
 
 }

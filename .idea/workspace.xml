@@ -56,10 +56,20 @@
       <file leaf-file-name="ConsoleOutputTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleOutputTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="175">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1191#1192#0" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="e#1399#1400#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,8 +94,8 @@
       <file leaf-file-name="ConsolePrompter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsolePrompter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+            <state relative-caret-position="848">
+              <caret line="64" column="63" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -752,23 +762,11 @@
       <option name="presentableId" value="Default" />
       <updated>1534898603671</updated>
       <workItem from="1534898607446" duration="45265000" />
-      <workItem from="1535095896493" duration="18795000" />
+      <workItem from="1535095896493" duration="19293000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_payslip-mark-2_test_(1) - 2018.08.27 at 15h 05m 35s.xml">
-      <configuration name="All in payslip-mark-2_test (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test_(1) - 2018.08.27 at 15h 05m 53s.xml">
-      <configuration name="All in payslip-mark-2_test (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test_(1) - 2018.08.27 at 15h 06m 03s.xml">
-      <configuration name="All in payslip-mark-2_test (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 06m 13s.xml">
-      <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 19m 42s.xml">
       <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
     </history-entry>
@@ -787,9 +785,21 @@
     <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 28m 41s.xml">
       <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 29m 46s.xml">
+      <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 33m 38s.xml">
+      <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 34m 42s.xml">
+      <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_payslip-mark-2_test_(2) - 2018.08.27 at 15h 34m 54s.xml">
+      <configuration name="All in payslip-mark-2_test (2)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64060000" />
+    <option name="totallyTimeSpent" value="64558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -812,11 +822,11 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32935324" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32935324" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32960597" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32935324" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -1259,8 +1269,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsolePrompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        <state relative-caret-position="848">
+          <caret line="64" column="63" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1269,10 +1279,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ConsoleOutputTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="175">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
           </folding>
         </state>
       </provider>
