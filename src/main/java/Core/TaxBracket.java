@@ -23,6 +23,8 @@ public class TaxBracket implements Comparable<TaxBracket> {
         return marginalTaxBracket;
     }
 
+    // allows TaxBrackets to be sorted from highest to lowest income minimum
+
     @Override
     public int compareTo(TaxBracket taxBracket) {
         return Float.compare(taxBracket.getBracketMin(), getBracketMin());
