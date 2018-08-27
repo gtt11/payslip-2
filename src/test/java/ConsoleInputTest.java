@@ -1,7 +1,6 @@
 import java.io.*;
 import Console.*;
 import Core.Employee;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -12,33 +11,33 @@ public class ConsoleInputTest {
     private ConsolePrompter consolePrompter;
     private Employee defaultEmployee;
 
-    @Before
-    public void setUp() throws UnsupportedEncodingException {
-        createDefaultEmployee_throughConsoleInput();
-    }
-
     @Test
-    public void createsEmployee_withProvidedName() {
+    public void createsEmployee_withProvidedName() throws UnsupportedEncodingException {
+        createDefaultEmployee_usingConsoleInput();
         assertThat(defaultEmployee.getFullName(), is("John Doe"));
     }
 
     @Test
-    public void createsEmployee_withProvidedSalary() {
+    public void createsEmployee_withProvidedSalary() throws UnsupportedEncodingException {
+        createDefaultEmployee_usingConsoleInput();
         assertThat(defaultEmployee.getSalary(), is(65000F));
     }
 
     @Test
-    public void createsEmployee_withProvidedSuperannuationRate() {
+    public void createsEmployee_withProvidedSuperannuationRate() throws UnsupportedEncodingException {
+        createDefaultEmployee_usingConsoleInput();
         assertThat(defaultEmployee.getSuperRate(), is(9F));
     }
 
     @Test
-    public void createsEmployee_withProvidedPaymentStartDate() {
+    public void createsEmployee_withProvidedPaymentStartDate() throws UnsupportedEncodingException {
+        createDefaultEmployee_usingConsoleInput();
         assertThat(defaultEmployee.getPaymentStartDate(), is("01 March"));
     }
 
     @Test
-    public void createsEmployee_withProvidedPaymentEndDate() {
+    public void createsEmployee_withProvidedPaymentEndDate() throws UnsupportedEncodingException {
+        createDefaultEmployee_usingConsoleInput();
         assertThat(defaultEmployee.getPaymentEndDate(), is("31 March"));
     }
 
@@ -70,7 +69,7 @@ public class ConsoleInputTest {
         createConsoleReader_withTestInput("John\nDoe\n65a00\n65000\n9 4\n10\n41 March\n01 March\n28 Mag\n31 March");
     }
 
-    public void createDefaultEmployee_throughConsoleInput() throws UnsupportedEncodingException {
+    public void createDefaultEmployee_usingConsoleInput() throws UnsupportedEncodingException {
         createConsoleReader_withTestInput("John\nDoe\n65000\n9\n01 March\n31 March");
     }
 

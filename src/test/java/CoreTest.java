@@ -10,10 +10,10 @@ import java.io.FileNotFoundException;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class AppTest {
+public class CoreTest {
 
     @Test
-    public void applicationTest_JohnDoe() throws FileNotFoundException {
+    public void coreTest_JohnDoe() throws FileNotFoundException {
 
         // Arrange
         EmployeeDetailGetter consoleReader = new ConsoleReaderAlternate();
