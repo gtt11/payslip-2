@@ -53,7 +53,7 @@ public class TaxCalculatorTest {
     }
 
     private void assertMonthlyTaxOnAnnualIncome(int annualSalary, int expectedTax) throws FileNotFoundException {
-        int incomeTax = taxCalculator.getMonthlyIncomeTax(annualSalary);
+        int incomeTax = taxCalculator.calculateMonthlyIncomeTax(annualSalary);
         assertThat(incomeTax, is(expectedTax));
     }
 }

@@ -13,7 +13,7 @@ public class TaxCalculator {
         this.taxBracketLoader = taxTaxBracketLoader;
     }
 
-    public int getMonthlyIncomeTax(float annualSalary) throws FileNotFoundException {
+    public int calculateMonthlyIncomeTax(float annualSalary) throws FileNotFoundException {
         TaxBracket[] taxBrackets = taxBracketLoader.getSortedTaxBrackets();
         for (int i = 0; i < taxBrackets.length; i++) {
             if (annualSalary >= taxBrackets[i].getBracketMin()) {

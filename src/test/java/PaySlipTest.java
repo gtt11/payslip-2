@@ -41,15 +41,25 @@ public class PaySlipTest {
     }
 
     @Test
-    public void calculatesMonthlySuperannnuation_roundsDown() {
+    public void calculatesMonthlySuper_roundsDown() {
         assertThat(payslip.getSuperannuation(), is("450"));
     }
 
     @Test
-    public void calculatesMonthlySuperannnuation_roundsUp() throws FileNotFoundException {
+    public void calculatesMonthlySuper_roundsUp() throws FileNotFoundException {
         Employee newEmployee = new Employee("John", "Doe", "60055", "13", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
         assertThat(payslip.getSuperannuation(), is("651"));
+    }
+
+    @Test
+    public void retrievesMonthlyIncomeTax() {
+        assertThat(payslip.getIncomeTax(), is("922"));
+    }
+
+    @Test
+    public void calculatesNetMonthlyIncome() {
+        assertThat(payslip.getNetIncome(), is("4082"));
     }
 
 }

@@ -4,18 +4,18 @@ public class PaySlip {
 
     private String name;
     private String payPeriod;
-    private Integer grossIncome;
-    private Integer incomeTax;
-    private Integer netIncome;
-    private Integer superannuation;
+    private String grossIncome;
+    private String incomeTax;
+    private String netIncome;
+    private String superannuation;
 
-    public PaySlip(String name, String payPeriod, Integer grossIncome, Integer incomeTax, Integer netIncome, Integer superannuation) {
+    public PaySlip(String name, String payPeriod, int grossIncome, int incomeTax, int netIncome, int superannuation) {
         this.name = name;
         this.payPeriod = payPeriod;
-        this.grossIncome = grossIncome;
-        this.incomeTax = incomeTax;
-        this.netIncome = netIncome;
-        this.superannuation = superannuation;
+        this.grossIncome = String.valueOf(grossIncome);
+        this.incomeTax = String.valueOf(incomeTax);
+        this.netIncome = String.valueOf(netIncome);
+        this.superannuation = String.valueOf(superannuation);
     }
 
     public String getName() {
@@ -27,18 +27,18 @@ public class PaySlip {
     }
 
     public String getGrossIncome() {
-        return String.valueOf(grossIncome);
+        return grossIncome;
     }
 
     public String getIncomeTax() {
-        return Integer.toString(incomeTax);
+        return incomeTax;
     }
 
     public String getNetIncome() {
-        return Integer.toString(netIncome);
+        return netIncome;
     }
 
     public String getSuperannuation() {
-        return Integer.toString(superannuation);
+        return superannuation;
     }
 }
