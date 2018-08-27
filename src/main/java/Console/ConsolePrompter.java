@@ -4,7 +4,7 @@ import Core.*;
 import java.text.*;
 
 
-public class ConsolePrompter implements EmployeeDetailGetter {
+public class ConsolePrompter implements EmployeeDetailGetter, PayslipPresenter {
 
     private ConsoleIO console;
 
@@ -56,4 +56,7 @@ public class ConsolePrompter implements EmployeeDetailGetter {
         }
     }
 
+    public void outputPayslip(PaySlip payslip) {
+        console.display("Name: " + payslip.getName());
+    }
 }

@@ -75,7 +75,7 @@ public class ConsoleInputTest {
 
     public void createConsoleReader_withTestInput(String testUserInput) throws UnsupportedEncodingException {
         InputStream inputStream = new ByteArrayInputStream(testUserInput.getBytes("UTF-8"));
-        ConsoleIO consoleIO = new ConsoleIO(inputStream);
+        ConsoleIO consoleIO = new ConsoleIO(inputStream, System.out);
         consolePrompter = new ConsolePrompter(consoleIO);
         defaultEmployee = consolePrompter.getEmployee();
     }
