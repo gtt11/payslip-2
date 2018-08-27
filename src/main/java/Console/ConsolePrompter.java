@@ -2,6 +2,7 @@ package Console;
 
 import Core.*;
 import java.io.*;
+import java.text.*;
 import java.util.Scanner;
 
 public class ConsolePrompter implements EmployeeDetailGetter {
@@ -13,20 +14,16 @@ public class ConsolePrompter implements EmployeeDetailGetter {
     }
 
     public Employee getEmployee() {
-        String firstName = requestFirstName();
-        String surname = requestSurname();
+        String firstName = requestTextInput();
+        String surname = requestTextInput();
         String salary = requestNumberInput();
         String superRate = requestNumberInput();
-        String paymentStartDate = requestPaymentStartDate();
-        String paymentEndDate = requestPaymentEndDate();
+        String paymentStartDate = requestDate();
+        String paymentEndDate = requestDate();
         return new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 
-    private String requestFirstName() {
-        return in.nextLine();
-    }
-
-    private String requestSurname() {
+    private String requestTextInput() {
         return in.nextLine();
     }
 
@@ -35,12 +32,20 @@ public class ConsolePrompter implements EmployeeDetailGetter {
         return numericalInputIsValid(inputValue) ? inputValue : requestNumberInput();
     }
 
-    private String requestPaymentStartDate() {
-        return in.nextLine();
+    private String requestDate() {
+        String inputValue = in.nextLine();
+        return dateInputIsValid(inputValue) ? inputValue : requestDate();
     }
 
-    private String requestPaymentEndDate() {
-        return in.nextLine();
+    public boolean dateInputIsValid(String inputValue){
+        SimpleDateFormat sdf = new SimpleDateFormat("dd MMMMM");
+        sdf.setLenient(false);
+        try {
+            sdf.parse(inputValue);
+            return true;
+        } catch (ParseException e) {
+            return false;
+        }
     }
 
     private boolean numericalInputIsValid(String inputValue) {

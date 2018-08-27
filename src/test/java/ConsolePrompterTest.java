@@ -43,10 +43,31 @@ public class ConsolePrompterTest {
     }
 
     @Test
-    public void validatesConsoleInput_seeksFurtherInputWhenInvalid() throws UnsupportedEncodingException {
-        createConsoleReader_withTestInput("John\nDoe\n65a00\n65000\n9 4\n10\n01 March\n31 March");
+    public void validatesConsoleInputForSalary_seeksFurtherInputWhenInvalid() throws UnsupportedEncodingException {
+        createDefaultEmployee_withInvalidConsoleInput();
         assertThat(defaultEmployee.getSalary(), is(65000F));
+    }
+
+    @Test
+    public void validatesConsoleInputForSuper_seeksFurtherInputWhenInvalid() throws UnsupportedEncodingException {
+        createDefaultEmployee_withInvalidConsoleInput();
         assertThat(defaultEmployee.getSuperRate(), is(10F));
+    }
+
+    @Test
+    public void validatesConsoleInputForStartDate_seeksFurtherInputWhenInvalid() throws UnsupportedEncodingException {
+        createDefaultEmployee_withInvalidConsoleInput();
+        assertThat(defaultEmployee.getPaymentStartDate(), is("01 March"));
+    }
+
+    @Test
+    public void validatesConsoleInputForEndDate_seeksFurtherInputWhenInvalid() throws UnsupportedEncodingException {
+        createDefaultEmployee_withInvalidConsoleInput();
+        assertThat(defaultEmployee.getPaymentEndDate(), is("31 March"));
+    }
+
+    public void createDefaultEmployee_withInvalidConsoleInput() throws UnsupportedEncodingException {
+        createConsoleReader_withTestInput("John\nDoe\n65a00\n65000\n9 4\n10\n41 March\n01 March\n28 Mag\n31 March");
     }
 
     public void createDefaultEmployee_throughConsoleInput() throws UnsupportedEncodingException {
