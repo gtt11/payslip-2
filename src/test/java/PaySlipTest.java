@@ -1,7 +1,10 @@
 import Core.*;
-import TaxCalculator.*;
+import DataStore.JSONTaxBracketLoader;
+import DataStore.TaxBracketLoader;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.FileNotFoundException;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -12,9 +15,9 @@ public class PaySlipTest {
     private PayslipGenerator payslipGenerator;
 
     @Before
-    public void setup() {
-        RateLoader taxRateLoader = new JSONTaxRateLoader();
-        TaxCalculator newTaxCalculator = new TaxCalculator(taxRateLoader);
+    public void setup() throws FileNotFoundException {
+        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
+        TaxCalculator newTaxCalculator = new TaxCalculator(taxTaxBracketLoader);
         payslipGenerator = new PayslipGenerator(newTaxCalculator);
         Employee newEmployee = new Employee("John", "Doe", "60050", "9", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
@@ -31,7 +34,7 @@ public class PaySlipTest {
     }
 
     @Test
-    public void calculatesGrossMonthlyIncome_roundsUp() {
+    public void calculatesGrossMonthlyIncome_roundsUp() throws FileNotFoundException {
         Employee newEmployee = new Employee("John", "Doe", "60055", "9", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
         assertThat(payslip.getGrossIncome(), is("5005"));
@@ -43,7 +46,7 @@ public class PaySlipTest {
     }
 
     @Test
-    public void calculatesMonthlySuperannnuation_roundsUp() {
+    public void calculatesMonthlySuperannnuation_roundsUp() throws FileNotFoundException {
         Employee newEmployee = new Employee("John", "Doe", "60055", "13", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
         assertThat(payslip.getSuperannuation(), is("651"));

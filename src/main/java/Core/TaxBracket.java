@@ -1,32 +1,36 @@
 package Core;
 
-public class TaxBracket {
-    private String bracketMin;
-    private String bracketMax;
-    private String baseTax;
-    private String marginalTaxRate;
+public class TaxBracket implements Comparable<TaxBracket> {
+    private float bracketMin;
+    private float bracketMax;
+    private float baseTax;
+    private float marginalTaxBracket;
 
-    public TaxBracket(String bracketMin, String bracketMax, String baseTax, String marginalTaxRate) {
-        this.bracketMin = bracketMin;
-        this.bracketMax = bracketMax;
-        this.baseTax = baseTax;
-        this.marginalTaxRate = marginalTaxRate;
+    public TaxBracket(String bracketMin, String bracketMax, String baseTax, String marginalTaxBracket) {
+        this.bracketMin = Float.parseFloat(bracketMin);
+        this.bracketMax = Float.parseFloat(bracketMax);
+        this.baseTax = Float.parseFloat(baseTax);
+        this.marginalTaxBracket = Float.parseFloat(marginalTaxBracket);
     }
 
-    public int getBracketMin() {
-        return Integer.parseInt(bracketMin);
+    public float getBracketMin() {
+        return bracketMin;
     }
 
-    public int getBracketMax() {
-        return Integer.parseInt(bracketMax);
+    public float getBracketMax() {
+        return bracketMax;
     }
 
-    public int getBaseTax() {
-        return Integer.parseInt(baseTax);
+    public float getBaseTax() {
+        return baseTax;
     }
 
-    public int getMarginalTaxRate() {
-        return Integer.parseInt(marginalTaxRate);
+    public float getMarginalTaxRate() {
+        return marginalTaxBracket;
     }
 
+    @Override
+    public int compareTo(TaxBracket o) {
+        return Float.compare(o.getBracketMin(), getBracketMin());
+    }
 }

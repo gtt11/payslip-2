@@ -1,5 +1,7 @@
 package Core;
 
+import java.io.FileNotFoundException;
+
 public class Application {
 
     private EmployeeDetailGetter employeeDetailGetter;
@@ -12,13 +14,13 @@ public class Application {
         this.payslipGenerator = payslipGenerator;
     }
 
-    public void runApplication() {
+    public void runApplication() throws FileNotFoundException {
         Employee employee = employeeDetailGetter.getEmployee();
         PaySlip payslip = preparePayslip(employee);
         outputPayslip(payslip);
     }
 
-    private PaySlip preparePayslip(Employee employee) {
+    private PaySlip preparePayslip(Employee employee) throws FileNotFoundException {
         return payslipGenerator.getPayslip(employee);
     }
 
