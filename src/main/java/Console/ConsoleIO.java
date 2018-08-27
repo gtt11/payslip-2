@@ -13,7 +13,8 @@ public class ConsoleIO {
         this.out = new PrintStream(output);
     }
 
-    public String ask() {
+    public String ask(String question) {
+        display(question);
         return in.nextLine();
     }
 
