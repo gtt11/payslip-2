@@ -58,5 +58,6 @@ public class ConsolePrompter implements EmployeeDetailGetter, PayslipPresenter {
 
     public void outputPayslip(PaySlip payslip) {
         console.display("Name: " + payslip.getName());
+        console.display("Pay Period: " + payslip.getPayPeriod());
     }
 }
