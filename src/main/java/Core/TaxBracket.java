@@ -24,7 +24,7 @@ public class TaxBracket implements Comparable<TaxBracket> {
     }
 
     @Override
-    public int compareTo(TaxBracket o) {
-        return Float.compare(o.getBracketMin(), getBracketMin());
+    public int compareTo(TaxBracket taxBracket) {
+        return Float.compare(taxBracket.getBracketMin(), getBracketMin());
     }
 }

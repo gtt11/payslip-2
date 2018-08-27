@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 public class AppTest {
 
     @Test
-    public void acceptanceTest() throws FileNotFoundException {
+    public void applicationTest_JohnDoe() throws FileNotFoundException {
 
         // Arrange
         EmployeeDetailGetter consoleReader = new ConsoleReaderAlternate();
@@ -29,12 +29,11 @@ public class AppTest {
 
         // Assert
         assertThat(paySlip.getName(), is("John Doe"));
-        assertThat(paySlip.getPayPeriod(), is("01 March – 31 March"));
+        assertThat(paySlip.getPayPeriod(), is("01 March - 31 March"));
         assertThat(paySlip.getGrossIncome(), is("5004"));
         assertThat(paySlip.getIncomeTax(), is("922"));
         assertThat(paySlip.getNetIncome(), is("4082"));
         assertThat(paySlip.getSuperannuation(), is("450"));
-
     }
 
 }
