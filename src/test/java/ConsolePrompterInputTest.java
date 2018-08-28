@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class ConsoleInputTest {
+public class ConsolePrompterInputTest {
 
     private ConsolePrompter consolePrompter;
     private Employee defaultEmployee;
