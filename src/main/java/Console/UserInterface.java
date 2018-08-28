@@ -1,7 +1,6 @@
 package Console;
 
-import Core.Employee;
-import Core.PaySlip;
+import Core.*;
 
 public interface UserInterface {
 

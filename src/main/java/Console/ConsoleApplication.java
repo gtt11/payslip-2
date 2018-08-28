@@ -1,8 +1,7 @@
 package Console;
 
 import Core.*;
-import DataStore.JSONTaxBracketLoader;
-import DataStore.TaxBracketLoader;
+import DataStore.*;
 
 import java.io.FileNotFoundException;
 

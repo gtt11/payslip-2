@@ -1,9 +1,6 @@
-import Core.MonthlyTaxCalculator;
-import Core.TaxCalculator;
+import Core.*;
 import DataStore.JSONTaxBracketLoader;
-import
- org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.FileNotFoundException;
 

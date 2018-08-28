@@ -1,7 +1,6 @@
 import Console.*;
 import Core.PaySlip;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.*;
 

@@ -1,10 +1,8 @@
 package Console;
 
-import Core.Employee;
-import Core.PaySlip;
+import Core.*;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.text.*;
 
 
 public class ConsolePrompter implements UserInterface {
