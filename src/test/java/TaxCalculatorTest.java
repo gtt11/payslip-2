@@ -1,7 +1,6 @@
-import Core.TaxCalculator;import DataStore.JSONTaxBracketLoader;
-import
- org.junit.Before;
-import org.junit.Test;
+import Core.*;
+import DataStore.JSONTaxBracketLoader;
+import org.junit.*;
 
 import java.io.FileNotFoundException;
 
@@ -16,7 +15,7 @@ public class TaxCalculatorTest {
     @Before
     public void setup() {
         JSONTaxBracketLoader taxLoader = new JSONTaxBracketLoader(alternateFilePath);
-        taxCalculator = new TaxCalculator(taxLoader);
+        taxCalculator = new MonthlyTaxCalculator(taxLoader);
     }
 
     @Test
@@ -53,7 +52,7 @@ public class TaxCalculatorTest {
     }
 
     private void assertMonthlyTaxOnAnnualIncome(int annualSalary, int expectedTax) throws FileNotFoundException {
-        int incomeTax = taxCalculator.calculateMonthlyIncomeTax(annualSalary);
+        int incomeTax = taxCalculator.calculateIncomeTax(annualSalary);
         assertThat(incomeTax, is(expectedTax));
     }
 }

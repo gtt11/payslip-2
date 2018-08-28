@@ -1,10 +1,11 @@
 package Console;
 
 import Core.*;
+
 import java.text.*;
 
 
-public class ConsolePrompter implements EmployeeDetailGetter, PayslipPresenter {
+public class ConsolePrompter implements UserInterface {
 
     private ConsoleIO console;
 
@@ -37,7 +38,7 @@ public class ConsolePrompter implements EmployeeDetailGetter, PayslipPresenter {
         return dateInputIsValid(inputValue) ? inputValue : requestDate("Invalid selection. " + question);
     }
 
-    public boolean dateInputIsValid(String inputValue){
+    public boolean dateInputIsValid(String inputValue) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMMM");
         sdf.setLenient(false);
         try {
@@ -58,7 +59,7 @@ public class ConsolePrompter implements EmployeeDetailGetter, PayslipPresenter {
     }
 
     public void outputPayslip(PaySlip payslip) {
-        console.display("Your payslip has been generated:\n");
+        console.display("\nYour payslip has been generated:\n");
         console.display("Name: " + payslip.getName());
         console.display("Pay Period: " + payslip.getPayPeriod());
         console.display("Gross Income: " + payslip.getGrossIncome());

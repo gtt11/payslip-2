@@ -30,7 +30,7 @@ public class PayslipGenerator {
 
     private int getMonthlyIncomeTax(Employee employee) throws FileNotFoundException {
         float annualSalary = employee.getSalary();
-        return taxCalculator.calculateMonthlyIncomeTax(annualSalary);
+        return taxCalculator.calculateIncomeTax(annualSalary);
     }
 
     private int getNetIncome(int grossMonthlyIncome, int incomeTax) {

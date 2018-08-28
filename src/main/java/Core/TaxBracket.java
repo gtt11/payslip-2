@@ -1,6 +1,7 @@
 package Core;
 
 public class TaxBracket implements Comparable<TaxBracket> {
+
     private float bracketMin;
     private float baseTax;
     private float marginalTaxBracket;
@@ -29,4 +30,5 @@ public class TaxBracket implements Comparable<TaxBracket> {
     public int compareTo(TaxBracket taxBracket) {
         return Float.compare(taxBracket.getBracketMin(), getBracketMin());
     }
+
 }
