@@ -1,24 +1,21 @@
+import Alternates.TaxCalculatorAlternate;
 import Core.*;
-import DataStore.JSONTaxBracketLoader;
-import DataStore.TaxBracketLoader;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.FileNotFoundException;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class PaySlipTest {
+public class PayslipGeneratorTest {
 
     private PaySlip payslip;
     private PayslipGenerator payslipGenerator;
 
     @Before
     public void setup() throws FileNotFoundException {
-        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
-        TaxCalculator newTaxCalculator = new TaxCalculator(taxTaxBracketLoader);
-        payslipGenerator = new PayslipGenerator(newTaxCalculator);
+        TaxCalculator taxCalculator = new TaxCalculatorAlternate();
+        payslipGenerator = new PayslipGenerator(taxCalculator);
         Employee newEmployee = new Employee("John", "Doe", "60050", "9", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
     }
