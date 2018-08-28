@@ -1,8 +1,6 @@
-import Alternates.ConsoleReaderAlternate;
-import Alternates.ConsoleWriterAlternate;
+import Alternates.ConsoleApplicationAlternate;
 import Core.*;
-import DataStore.JSONTaxBracketLoader;
-import DataStore.TaxBracketLoader;
+import DataStore.*;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -16,16 +14,13 @@ public class CoreTest {
     public void coreTest_JohnDoe() throws FileNotFoundException {
 
         // Arrange
-        EmployeeDetailGetter consoleReader = new ConsoleReaderAlternate();
-        ConsoleWriterAlternate consoleWriter = new ConsoleWriterAlternate();
         TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
-        TaxCalculator newTaxCalculator = new TaxCalculator(taxTaxBracketLoader);
+        TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
-        Application newPrompter = new Application(consoleReader, consoleWriter, payslipGenerator);
+        ConsoleApplicationAlternate consoleApplication = new ConsoleApplicationAlternate(payslipGenerator);
 
         // Act
-        newPrompter.runApplication();
-        PaySlip paySlip = consoleWriter.getPayslip();
+        PaySlip paySlip = consoleApplication.getPayslip();
 
         // Assert
         assertThat(paySlip.getName(), is("John Doe"));
