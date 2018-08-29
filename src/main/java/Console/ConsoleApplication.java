@@ -17,15 +17,7 @@ public class ConsoleApplication {
 
     public void run() throws FileNotFoundException {
         Employee employee = userInterface.getEmployee();
-        PaySlip payslip = preparePayslip(employee);
-        outputPayslip(payslip);
-    }
-
-    private PaySlip preparePayslip(Employee employee) throws FileNotFoundException {
-        return payslipGenerator.getPayslip(employee);
-    }
-
-    private void outputPayslip(PaySlip payslip) {
+        PaySlip payslip = payslipGenerator.getPayslip(employee);
         userInterface.outputPayslip(payslip);
     }
 
