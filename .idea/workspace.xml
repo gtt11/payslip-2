@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8983ef2-a5f1-4c7b-a01b-5aaad25b82bf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Console/ConsoleRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EndToEndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EndToEndTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -28,30 +31,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MonthlyTaxCalculator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Core/MonthlyTaxCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONTaxBracketLoaderTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/JSONTaxBracketLoaderTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EndToEndTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/EndToEndTest.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsoleApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java">
+      <file leaf-file-name="ConsoleRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="90">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaxCalculatorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TaxCalculatorTest.java">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Console/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,14 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsolePrompterInputTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ConsolePrompterInputTest.java">
+      <file leaf-file-name="PayslipGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="92" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -141,6 +117,27 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaySlip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Core/PaySlip.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsolePrompterInputTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ConsolePrompterInputTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -393,9 +390,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ApplicationOutput/ConsoleWriterAlternate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Core/PayslipPresenter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleWriterAlternate.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
         <option value="$PROJECT_DIR$/src/main/java/Data/2018-19_tax_rates.json" />
         <option value="$PROJECT_DIR$/src/main/java/TaxCalculator/RateLoader.java" />
@@ -443,7 +437,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Console/ConsolePrompter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Console/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/Core/TaxBracket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Console/Builder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Console/Application.java" />
       </list>
     </option>
   </component>
@@ -598,8 +595,8 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.All in payslip-mark-2_test (1)">
-    <configuration name="ConsoleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Console.ConsoleApplication" />
+    <configuration name="ConsoleRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Console.ConsoleRunner" />
       <module name="payslip-mark-2_main" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -722,13 +719,13 @@
       <item itemvalue="JUnit.CoreTest" />
       <item itemvalue="JUnit.CoreTest.coreTest_JohnDoe" />
       <item itemvalue="JUnit.All in payslip-mark-2_test" />
-      <item itemvalue="Application.ConsoleApplication" />
+      <item itemvalue="Application.ConsoleRunner" />
       <item itemvalue="JUnit.All in payslip-mark-2_test (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in payslip-mark-2_test (1)" />
-        <item itemvalue="Application.ConsoleApplication" />
+        <item itemvalue="Application.ConsoleRunner" />
         <item itemvalue="JUnit.All in payslip-mark-2_test" />
         <item itemvalue="JUnit.CoreTest.coreTest_JohnDoe" />
         <item itemvalue="JUnit.CoreTest" />
@@ -747,7 +744,7 @@
       <updated>1534898603671</updated>
       <workItem from="1534898607446" duration="45265000" />
       <workItem from="1535095896493" duration="23499000" />
-      <workItem from="1535410467622" duration="14463000" />
+      <workItem from="1535410467622" duration="16105000" />
     </task>
     <servers />
   </component>
@@ -784,7 +781,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83227000" />
+    <option name="totallyTimeSpent" value="84869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -808,8 +805,8 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23880596" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23880596" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3283582" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22257721" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info id="Learn" order="2" />
@@ -879,16 +876,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Core/MonthlyTaxCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Resources/tax_brackets.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1136,20 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PaySlip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataStore/TaxBracketLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1178,13 +1151,6 @@
             <element signature="e#475#476#0" expanded="true" />
             <element signature="e#508#509#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Core/TaxCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1268,10 +1234,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Core/TaxCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PaySlip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Core/PayslipGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Console/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

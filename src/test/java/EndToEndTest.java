@@ -24,7 +24,7 @@ public class EndToEndTest {
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
 
-        ConsoleApplication consoleApplication = new ConsoleApplication(payslipGenerator, consolePrompter);
+        ConsoleRunner consoleApplication = new ConsoleRunner(payslipGenerator, consolePrompter);
 
         // Act
         consoleApplication.run();
