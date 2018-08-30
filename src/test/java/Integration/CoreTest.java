@@ -1,3 +1,5 @@
+package Integration;
+
 import Alternates.ConsoleApplicationAlternate;
 import Core.*;
 import DataStore.*;
@@ -16,7 +18,7 @@ public class CoreTest {
         // Arrange
         TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
-        PayslipGenerator payslipGenerator = new PayslipGenerator(newTaxCalculator);
+        PayslipGeneratorStandard payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
         ConsoleApplicationAlternate consoleApplication = new ConsoleApplicationAlternate(payslipGenerator);
 
         // Act

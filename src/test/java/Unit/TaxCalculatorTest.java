@@ -1,3 +1,5 @@
+package Unit;
+
 import Core.*;
 import DataStore.JSONTaxBracketLoader;
 import org.junit.*;
@@ -13,7 +15,7 @@ public class TaxCalculatorTest {
     private TaxCalculator taxCalculator;
 
     @Before
-    public void setup() {
+    public void setup() throws FileNotFoundException {
         JSONTaxBracketLoader taxLoader = new JSONTaxBracketLoader(alternateFilePath);
         taxCalculator = new MonthlyTaxCalculator(taxLoader);
     }

@@ -1,3 +1,5 @@
+package Unit;
+
 import Console.*;
 import Core.PaySlip;
 import org.junit.*;
@@ -7,7 +9,7 @@ import java.io.*;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ConsolePrompterOutputTest {
+public class PayslipWriterTest {
 
     private OutputStream consoleOutput;
 
@@ -15,9 +17,9 @@ public class ConsolePrompterOutputTest {
     public void setUp() {
         PaySlip paySlip = new PaySlip("John Doe", "01 March - 31 March", 5004, 922, 4082, 450);
         consoleOutput = new ByteArrayOutputStream();
-        ConsoleIO consoleIO = new ConsoleIO(System.in, consoleOutput);
-        ConsolePrompter consolePrompter = new ConsolePrompter(consoleIO);
-        consolePrompter.outputPayslip(paySlip);
+        ConsoleWriter consoleWriter = new ConsoleWriter(consoleOutput);
+        PayslipWriter payslipWriter = new PayslipWriter(consoleWriter);
+        payslipWriter.outputPayslip(paySlip);
     }
 
     @Test

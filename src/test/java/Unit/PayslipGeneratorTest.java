@@ -1,3 +1,5 @@
+package Unit;
+
 import Alternates.TaxCalculatorAlternate;
 import Core.*;
 import org.junit.*;
@@ -10,12 +12,12 @@ import static org.junit.Assert.assertThat;
 public class PayslipGeneratorTest {
 
     private PaySlip payslip;
-    private PayslipGenerator payslipGenerator;
+    private PayslipGeneratorStandard payslipGenerator;
 
     @Before
-    public void setup() throws FileNotFoundException {
+    public void setup() {
         TaxCalculator taxCalculator = new TaxCalculatorAlternate();
-        payslipGenerator = new PayslipGenerator(taxCalculator);
+        payslipGenerator = new PayslipGeneratorStandard(taxCalculator);
         Employee newEmployee = new Employee("John", "Doe", "60050", "9", "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(newEmployee);
     }

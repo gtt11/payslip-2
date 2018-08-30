@@ -1,14 +1,16 @@
-import java.io.*;
+package Unit;
+
 import Console.*;
 import Core.Employee;
 import org.junit.Test;
 
+import java.io.*;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class ConsolePrompterInputTest {
+public class EmployeeGetterTest {
 
-    private ConsolePrompter consolePrompter;
     private Employee defaultEmployee;
 
     @Test
@@ -65,7 +67,7 @@ public class ConsolePrompterInputTest {
         assertThat(defaultEmployee.getPaymentEndDate(), is("31 March"));
     }
 
-    public void createDefaultEmployee_withInvalidConsoleInput() throws UnsupportedEncodingException {
+    public void createDefaultEmployee_withInvalidConsoleInput() throws UnsupportedEncodingException{
         createConsoleReader_withTestInput("John\nDoe\n65a00\n65000\n9 4\n10\n41 March\n01 March\n28 Mag\n31 March");
     }
 
@@ -75,9 +77,10 @@ public class ConsolePrompterInputTest {
 
     public void createConsoleReader_withTestInput(String testUserInput) throws UnsupportedEncodingException {
         InputStream inputStream = new ByteArrayInputStream(testUserInput.getBytes("UTF-8"));
-        ConsoleIO consoleIO = new ConsoleIO(inputStream, System.out);
-        consolePrompter = new ConsolePrompter(consoleIO);
-        defaultEmployee = consolePrompter.getEmployee();
+        ConsoleReader consoleReader = new ConsoleReader(inputStream);
+        ConsoleWriter consoleWriter = new ConsoleWriter(System.out);
+        EmployeeGetter employeeGetter = new EmployeeGetter(consoleReader, consoleWriter);
+        defaultEmployee = employeeGetter.getEmployee();
     }
 
 }

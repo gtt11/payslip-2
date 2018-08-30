@@ -2,17 +2,15 @@ package Alternates;
 
 import Core.*;
 
-import java.io.FileNotFoundException;
-
 public class ConsoleApplicationAlternate {
 
-    private PayslipGenerator payslipGenerator;
+    private PayslipGeneratorStandard payslipGenerator;
 
-    public ConsoleApplicationAlternate(PayslipGenerator payslipGenerator) {
+    public ConsoleApplicationAlternate(PayslipGeneratorStandard payslipGenerator) {
         this.payslipGenerator = payslipGenerator;
     }
 
-    public PaySlip getPayslip() throws FileNotFoundException {
+    public PaySlip getPayslip() {
         Employee employee = new Employee("John", "Doe", "60050", "9", "01 March", "31 March");
         return payslipGenerator.getPayslip(employee);
     }
