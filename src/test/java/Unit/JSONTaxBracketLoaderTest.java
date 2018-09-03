@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 
 public class JSONTaxBracketLoaderTest {
 
-    private final String alternateFilePath = "src/test/java/Alternates/tax_brackets_alternate.json";
+    private final String alternateFilePath = "src/test/java/Data/tax_brackets.json";
     private TaxBracket[] taxBrackets;
 
     @Before

@@ -29,7 +29,7 @@ public class KataExampleTest {
         ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
         ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
 
-        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
+        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Data/tax_brackets.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         PayslipGeneratorStandard payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
 
@@ -59,7 +59,7 @@ public class KataExampleTest {
         ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
         ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
 
-        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
+        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Data/tax_brackets.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         PayslipGeneratorStandard payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
 

@@ -19,7 +19,7 @@ public class CoreTest {
 
     @Before
     public void setup() throws FileNotFoundException {
-        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
+        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Data/tax_brackets.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
     }

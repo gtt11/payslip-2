@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TaxCalculatorTest {
 
-    private final String alternateFilePath = "src/test/java/Alternates/tax_brackets_alternate.json";
+    private final String alternateFilePath = "src/test/java/Data/tax_brackets.json";
     private TaxCalculator taxCalculator;
 
     @Before
