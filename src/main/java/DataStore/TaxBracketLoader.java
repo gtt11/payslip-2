@@ -1,6 +1,6 @@
 package DataStore;
 
-import Core.TaxBracket;
+import Core.Tax.TaxBracket;
 
 import java.io.FileNotFoundException;
 

@@ -1,6 +1,6 @@
 package DataStore;
 
-import Core.TaxBracket;
+import Core.Tax.TaxBracket;
 import com.google.gson.Gson;
 
 import java.io.*;
