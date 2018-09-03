@@ -9,42 +9,43 @@ import java.math.RoundingMode;
 public class PayslipGeneratorStandard implements PayslipGenerator {
 
     private TaxCalculator taxCalculator;
-    private BigDecimal salaryDivisor;
+    private BigDecimal payPeriodDivisor;
     private final int quotientScale = 0;
 
     public PayslipGeneratorStandard(TaxCalculator taxCalculator) {
         this.taxCalculator = taxCalculator;
-        this.salaryDivisor = taxCalculator.getSalaryDivisor();
+        this.payPeriodDivisor = taxCalculator.getPayPeriodDivisor();
     }
 
     public Payslip getPayslip(Employee employee) {
         String fullName = employee.getFullName();
         String payPeriod = getPayPeriod(employee);
-        BigDecimal grossMonthlyIncome = getGrossMonthlyIncome(employee);
-        BigDecimal monthlyIncomeTax = getMonthlyIncomeTax(employee);
-        BigDecimal netIncome = grossMonthlyIncome.subtract(monthlyIncomeTax);
-        BigDecimal superannuation = getSuper(employee, grossMonthlyIncome);
-        return new PayslipStandard(fullName, payPeriod, grossMonthlyIncome, monthlyIncomeTax, netIncome, superannuation);
+        BigDecimal grossIncome = getGrossIncomeForPayPeriod(employee);
+        BigDecimal incomeTax = getIncomeTaxForPayPeriod(employee);
+        BigDecimal netIncome = grossIncome.subtract(incomeTax);
+        BigDecimal superannuation = getSuperForPayPeriod(employee, grossIncome);
+        return new PayslipStandard(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
     }
 
     private String getPayPeriod(Employee employee) {
         return employee.getPaymentStartDate() + " - " + employee.getPaymentEndDate();
     }
 
-    private BigDecimal getGrossMonthlyIncome(Employee employee) {
+    private BigDecimal getGrossIncomeForPayPeriod(Employee employee) {
         BigDecimal annualSalary = employee.getSalary();
-        BigDecimal monthlySalary = annualSalary.divide(salaryDivisor, quotientScale, RoundingMode.HALF_UP);
-        return monthlySalary;
+        BigDecimal roundedIncomeForPayPeriod = annualSalary.divide(payPeriodDivisor, quotientScale, RoundingMode.HALF_UP);
+        return roundedIncomeForPayPeriod;
     }
 
-    private BigDecimal getMonthlyIncomeTax(Employee employee) {
+    private BigDecimal getIncomeTaxForPayPeriod(Employee employee) {
         BigDecimal annualSalary = employee.getSalary();
         return taxCalculator.calculateIncomeTax(annualSalary);
     }
 
-    private BigDecimal getSuper(Employee employee, BigDecimal grossIncome) {
+    private BigDecimal getSuperForPayPeriod(Employee employee, BigDecimal grossIncome) {
         BigDecimal superRate = employee.getSuperRate();
-        return grossIncome.multiply(superRate).divide(new BigDecimal("100"), quotientScale, RoundingMode.HALF_UP);
+        BigDecimal roundedSuperForPayPeriod = grossIncome.multiply(superRate).divide(new BigDecimal("100"), quotientScale, RoundingMode.HALF_UP);
+        return roundedSuperForPayPeriod;
     }
 
 }

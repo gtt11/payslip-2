@@ -11,15 +11,15 @@ public class MonthlyTaxCalculator implements TaxCalculator {
     private TaxBracketLoader taxBracketLoader;
     private TaxBracket[] taxBrackets;
     private final int quotientScale = 0;
-    private final String salaryDivisor = "12";
+    private final String payPeriodDivisor = "12";
 
     public MonthlyTaxCalculator(TaxBracketLoader taxTaxBracketLoader) throws FileNotFoundException {
         this.taxBracketLoader = taxTaxBracketLoader;
         taxBrackets = taxBracketLoader.getSortedTaxBrackets();
     }
 
-    public BigDecimal getSalaryDivisor() {
-        return new BigDecimal(salaryDivisor);
+    public BigDecimal getPayPeriodDivisor() {
+        return new BigDecimal(payPeriodDivisor);
     }
 
     public BigDecimal calculateIncomeTax(BigDecimal annualSalary) {
@@ -39,7 +39,7 @@ public class MonthlyTaxCalculator implements TaxCalculator {
         BigDecimal baseTax = taxBracket.getBaseTax();
         BigDecimal marginalTax = getMarginalTax(grossIncome, taxBracket);
         BigDecimal totalIncomeTax = baseTax.add(marginalTax);
-        BigDecimal monthlyIncomeTax = totalIncomeTax.divide(getSalaryDivisor(), quotientScale, RoundingMode.HALF_UP);
+        BigDecimal monthlyIncomeTax = totalIncomeTax.divide(getPayPeriodDivisor(), quotientScale, RoundingMode.HALF_UP);
         return monthlyIncomeTax;
     }
 
