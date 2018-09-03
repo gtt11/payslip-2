@@ -1,12 +1,14 @@
 package Unit;
 
-import Core.TaxBracket;
+import Core.Tax.TaxBracket;
 import DataStore.JSONTaxBracketLoader;
 import org.junit.*;
 
 import java.io.FileNotFoundException;
+import java.math.RoundingMode;
 
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class JSONTaxBracketLoaderTest {
@@ -27,10 +29,15 @@ public class JSONTaxBracketLoaderTest {
 
     @Test
     public void returnsArrayOfTaxBrackets_sortedFromHighestToLowestIncome() {
-        assertThat(taxBrackets[4].getBracketMin(), is(0F));
-        assertThat(taxBrackets[3].getBracketMin(), is(18201F));
-        assertThat(taxBrackets[2].getBaseTax(), is(3572F));
-        assertThat(taxBrackets[1].getMarginalTaxRate(), is(37F));
-        assertThat(taxBrackets[0].getMarginalTaxRate(), is(45F));
+        assertTaxBracketMinimum("180001", taxBrackets[0]);
+        assertTaxBracketMinimum("90001", taxBrackets[1]);
+        assertTaxBracketMinimum("37001", taxBrackets[2]);
+        assertTaxBracketMinimum("18201", taxBrackets[3]);
+        assertTaxBracketMinimum("0", taxBrackets[4]);
+    }
+
+    private void assertTaxBracketMinimum(String expectedValue, TaxBracket taxBracket) {
+        String taxBracketMin = taxBracket.getBracketMin().setScale(0, RoundingMode.HALF_UP).toString();
+        assertEquals(expectedValue, taxBracketMin);
     }
 }
