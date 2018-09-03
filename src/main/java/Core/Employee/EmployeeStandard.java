@@ -1,19 +1,21 @@
-package Core;
+package Core.Employee;
 
-public class Employee {
+import java.math.BigDecimal;
+
+public class EmployeeStandard implements Employee {
 
     private String firstName;
     private String surname;
-    private Float salary;
-    private Float superRate;
+    private BigDecimal salary;
+    private BigDecimal superRate;
     private String paymentStartDate;
     private String paymentEndDate;
 
-    public Employee(String firstName, String surname, String salary, String superRate, String paymentStartDate, String paymentEndDate) {
+    public EmployeeStandard(String firstName, String surname, BigDecimal salary, BigDecimal superRate, String paymentStartDate, String paymentEndDate) {
         this.firstName = firstName;
         this.surname = surname;
-        this.salary = Float.parseFloat(salary);
-        this.superRate = Float.parseFloat(superRate);
+        this.salary = salary;
+        this.superRate = superRate;
         this.paymentStartDate = paymentStartDate;
         this.paymentEndDate = paymentEndDate;
     }
@@ -22,11 +24,11 @@ public class Employee {
         return firstName + " " + surname;
     }
 
-    public Float getSalary() {
+    public BigDecimal getSalary() {
         return salary;
     }
 
-    public Float getSuperRate() {
+    public BigDecimal getSuperRate() {
         return superRate;
     }
 
