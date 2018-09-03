@@ -1,5 +1,8 @@
 package Core;
 
+import Core.Payslip.PayslipGeneratorStandard;
+import Core.Tax.MonthlyTaxCalculator;
+import Core.Tax.TaxCalculator;
 import DataStore.*;
 
 import java.io.FileNotFoundException;

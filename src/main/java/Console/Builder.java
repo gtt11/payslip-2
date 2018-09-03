@@ -1,14 +1,19 @@
 package Console;
 
-import Core.PayslipGeneratorStandard;
+import Console.Reader.ConsoleReader;
+import Console.Reader.ConsoleReaderStandard;
+import Console.Writer.ConsoleWriter;
+import Console.Writer.ConsoleWriterStandard;
+import Core.Payslip.PayslipGeneratorStandard;
+import Application.*;
 
 public class Builder {
 
     public static Runner buildConsoleRunner(PayslipGeneratorStandard payslipGenerator) {
-        ConsoleReader consoleReader = new ConsoleReader(System.in);
-        ConsoleWriter consoleWriter = new ConsoleWriter(System.out);
-        PayslipWriter payslipWriter = new PayslipWriter(consoleWriter);
-        EmployeeGetter employeeGetter = new EmployeeGetter(consoleReader, consoleWriter);
+        ConsoleReader consoleReader = new ConsoleReaderStandard();
+        ConsoleWriter consoleWriter = new ConsoleWriterStandard();
+        ConsolePayslipPresenter payslipWriter = new ConsolePayslipPresenter(consoleWriter);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
         return new Runner(employeeGetter, payslipGenerator, payslipWriter);
     }
 
