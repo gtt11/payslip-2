@@ -4,7 +4,6 @@ import Console.Reader.ConsoleReader;
 import Console.Writer.ConsoleWriter;
 import Core.Employee.Employee;
 import Core.Employee.EmployeeGetter;
-import Core.Employee.EmployeeStandard;
 
 import java.math.BigDecimal;
 import java.text.ParseException;
@@ -28,7 +27,7 @@ public class ConsoleEmployeeGetter implements EmployeeGetter {
         BigDecimal superRate = requestNumberInput("Please enter your super rate:");
         String paymentStartDate = requestDate("Please enter your payment start date:");
         String paymentEndDate = requestDate("Please enter your payment end date:");
-        return new EmployeeStandard(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
+        return new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 
     private String requestTextInput(String question) {

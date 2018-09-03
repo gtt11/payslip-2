@@ -1,11 +1,13 @@
 package Unit;
 
 import Alternates.*;
-import Core.Employee.Employee;
+import Core.Employee.*;
 import Core.Payslip.Payslip;
 import Core.Payslip.PayslipGeneratorStandard;
 import Core.Tax.TaxCalculator;
 import org.junit.*;
+
+import java.math.BigDecimal;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -76,12 +78,16 @@ public class PayslipGeneratorTest {
     }
 
     private void preparePayslip_JohnDoe() {
-        Employee employee = new EmployeeAlternateJohnDoe();
+        BigDecimal salary = new BigDecimal("60050");
+        BigDecimal superRate = new BigDecimal("9");
+        Employee employee = new Employee("John", "Doe", salary, superRate, "1 March", "31 March");
         payslip = payslipGenerator.getPayslip(employee);
     }
 
     private void preparePayslip_JaneCitizen() {
-        Employee employee = new EmployeeAlternateJaneCitizen();
+        BigDecimal salary = new BigDecimal("60535");
+        BigDecimal superRate = new BigDecimal("10.5");
+        Employee employee = new Employee("Jane", "Citizen", salary, superRate, "1 August", "31 August");
         payslip = payslipGenerator.getPayslip(employee);
     }
 

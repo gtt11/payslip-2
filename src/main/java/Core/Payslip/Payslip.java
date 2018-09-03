@@ -2,18 +2,45 @@ package Core.Payslip;
 
 import java.math.BigDecimal;
 
-public interface Payslip {
+public class Payslip {
 
-    String getName();
+    private String name;
+    private String payPeriod;
+    private BigDecimal grossIncome;
+    private BigDecimal incomeTax;
+    private BigDecimal netIncome;
+    private BigDecimal superannuation;
 
-    String getPayPeriod();
+    public Payslip(String name, String payPeriod, BigDecimal grossIncome, BigDecimal incomeTax, BigDecimal netIncome, BigDecimal superannuation) {
+        this.name = name;
+        this.payPeriod = payPeriod;
+        this.grossIncome = grossIncome;
+        this.incomeTax = incomeTax;
+        this.netIncome = netIncome;
+        this.superannuation = superannuation;
+    }
 
-    BigDecimal getGrossIncome();
+    public String getName() {
+        return name;
+    }
 
-    BigDecimal getIncomeTax();
+    public String getPayPeriod() {
+        return payPeriod;
+    }
 
-    BigDecimal getNetIncome();
+    public BigDecimal getGrossIncome() {
+        return grossIncome;
+    }
 
-    BigDecimal getSuperannuation();
+    public BigDecimal getIncomeTax() {
+        return incomeTax;
+    }
 
+    public BigDecimal getNetIncome() {
+        return netIncome;
+    }
+
+    public BigDecimal getSuperannuation() {
+        return superannuation;
+    }
 }

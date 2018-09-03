@@ -6,6 +6,8 @@ import Core.Payslip.Payslip;
 import Core.Payslip.PayslipPresenter;
 import org.junit.*;
 
+import java.math.BigDecimal;
+
 import static org.junit.Assert.assertTrue;
 
 public class ConsolePayslipPresenterTest {
@@ -92,13 +94,21 @@ public class ConsolePayslipPresenterTest {
     }
 
     private void outputPayslipJohnDoe() {
-        Payslip paySlip = new PayslipAlternateJohnDoe();
-        payslipPresenter.outputPayslip(paySlip);
+        BigDecimal grossIncome = new BigDecimal("5004");
+        BigDecimal incomeTax = new BigDecimal("922");
+        BigDecimal netIncome = grossIncome.subtract(incomeTax);
+        BigDecimal superannuation = new BigDecimal("450");
+        Payslip payslip = new Payslip("John Doe", "01 March - 31 March", grossIncome, incomeTax, netIncome, superannuation);
+        payslipPresenter.outputPayslip(payslip);
     }
 
     private void outputPayslipJaneCitizen() {
-        Payslip paySlip = new PayslipAlternateJaneCitizen();
-        payslipPresenter.outputPayslip(paySlip);
+        BigDecimal grossIncome = new BigDecimal("6403");
+        BigDecimal incomeTax = new BigDecimal("1203");
+        BigDecimal netIncome = grossIncome.subtract(incomeTax);
+        BigDecimal superannuation = new BigDecimal("498");
+        Payslip payslip = new Payslip("Jane Citizen", "1 December - 31 December", grossIncome, incomeTax, netIncome, superannuation);
+        payslipPresenter.outputPayslip(payslip);
     }
 
     private void assertConsoleOutput(String expectedValue) {

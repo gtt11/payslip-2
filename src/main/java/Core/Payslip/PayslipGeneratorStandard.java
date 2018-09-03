@@ -24,7 +24,7 @@ public class PayslipGeneratorStandard implements PayslipGenerator {
         BigDecimal incomeTax = getIncomeTaxForPayPeriod(employee);
         BigDecimal netIncome = grossIncome.subtract(incomeTax);
         BigDecimal superannuation = getSuperForPayPeriod(employee, grossIncome);
-        return new PayslipStandard(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
+        return new Payslip(fullName, payPeriod, grossIncome, incomeTax, netIncome, superannuation);
     }
 
     private String getPayPeriod(Employee employee) {

@@ -1,18 +1,14 @@
 package Integration;
 
-import Alternates.EmployeeAlternateJaneCitizen;
-import Alternates.EmployeeAlternateJohnDoe;
-import Core.Employee.Employee;
-import Core.Payslip.Payslip;
-import Core.Payslip.PayslipGenerator;
-import Core.Payslip.PayslipGeneratorStandard;
-import Core.Tax.MonthlyTaxCalculator;
-import Core.Tax.TaxCalculator;
+import Core.Employee.*;
+import Core.Payslip.*;
+import Core.Tax.*;
 import DataStore.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.math.BigDecimal;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -32,7 +28,9 @@ public class CoreTest {
     public void coreTest_JohnDoe() {
 
         // Arrange
-        Employee employee = new EmployeeAlternateJohnDoe();
+        BigDecimal salary = new BigDecimal("60050");
+        BigDecimal superRate = new BigDecimal("9");
+        Employee employee = new Employee("John", "Doe", salary, superRate, "1 March", "31 March");
 
         // Act
         Payslip paySlip = payslipGenerator.getPayslip(employee);
@@ -50,7 +48,9 @@ public class CoreTest {
     public void coreTest_JaneCitizen() {
 
         // Arrange
-        Employee employee = new EmployeeAlternateJaneCitizen();
+        BigDecimal salary = new BigDecimal("60535");
+        BigDecimal superRate = new BigDecimal("10.5");
+        Employee employee = new Employee("Jane", "Citizen", salary, superRate, "1 August", "31 August");
 
         // Act
         Payslip paySlip = payslipGenerator.getPayslip(employee);
