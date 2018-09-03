@@ -1,47 +1,79 @@
 package EndToEnd;
 
+import Alternates.ConsoleReaderAlternateAcceptsInputStream;
+import Alternates.ConsoleWriterAlternateSavesOutput;
+import Application.*;
 import Console.*;
-import Core.*;
+import Console.Reader.ConsoleReader;
+import Core.Payslip.PayslipGeneratorStandard;
+import Core.Tax.MonthlyTaxCalculator;
+import Core.Tax.TaxCalculator;
 import DataStore.*;
 import org.junit.Test;
 
 import java.io.*;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 public class KataExampleTest {
 
     @Test
-    public void consolePayslipCalculator() throws UnsupportedEncodingException, FileNotFoundException {
+    public void consolePayslipCalculator_JohnDoe() throws UnsupportedEncodingException, FileNotFoundException {
 
         // Arrange
         String testUserInput = "John\nDoe\n60050\n9\n01 March\n31 March";
 
-        InputStream inputStream = new ByteArrayInputStream(testUserInput.getBytes("UTF-8"));
-        ConsoleReader consoleReader = new ConsoleReader(inputStream);
+        ConsoleReader consoleReader = new ConsoleReaderAlternateAcceptsInputStream(testUserInput);
+        ConsoleWriterAlternateSavesOutput consoleWriter = new ConsoleWriterAlternateSavesOutput();
 
-        OutputStream outputStream = new ByteArrayOutputStream();
-        ConsoleWriter consoleWriter = new ConsoleWriter(outputStream);
-
-        PayslipWriter payslipWriter = new PayslipWriter(consoleWriter);
-        EmployeeGetter employeeGetter = new EmployeeGetter(consoleReader, consoleWriter);
+        ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
 
         TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
         PayslipGeneratorStandard payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
 
-        Runner consoleApplication = new Runner(employeeGetter, payslipGenerator, payslipWriter);
+        Runner consoleApplication = new Runner(employeeGetter, payslipGenerator, payslipPresenter);
 
         // Act
         consoleApplication.run();
 
         // Assert
-        assertThat(outputStream.toString().contains("Name: John Doe"), is(true));
-        assertThat(outputStream.toString().contains("Pay Period: 01 March - 31 March"), is(true));
-        assertThat(outputStream.toString().contains("Gross Income: 5004"), is(true));
-        assertThat(outputStream.toString().contains("Income Tax: 922"), is(true));
-        assertThat(outputStream.toString().contains("Net Income: 4082"), is(true));
-        assertThat(outputStream.toString().contains("Super: 450"), is(true));
+        assertTrue(consoleWriter.outputIncludes("Name: John Doe"));
+        assertTrue(consoleWriter.outputIncludes("Pay Period: 01 March - 31 March"));
+        assertTrue(consoleWriter.outputIncludes("Gross Income: 5004"));
+        assertTrue(consoleWriter.outputIncludes("Income Tax: 922"));
+        assertTrue(consoleWriter.outputIncludes("Net Income: 4082"));
+        assertTrue(consoleWriter.outputIncludes("Super: 450"));
+    }
+
+    @Test
+    public void consolePayslipCalculator_RyanChen() throws UnsupportedEncodingException, FileNotFoundException {
+
+        // Arrange
+        String testUserInput = "Ryan\nChen\n120000\n10\n01 March\n31 March";
+
+        ConsoleReader consoleReader = new ConsoleReaderAlternateAcceptsInputStream(testUserInput);
+        ConsoleWriterAlternateSavesOutput consoleWriter = new ConsoleWriterAlternateSavesOutput();
+
+        ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
+
+        TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Alternates/tax_brackets_alternate.json");
+        TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
+        PayslipGeneratorStandard payslipGenerator = new PayslipGeneratorStandard(newTaxCalculator);
+
+        Runner consoleApplication = new Runner(employeeGetter, payslipGenerator, payslipPresenter);
+
+        // Act
+        consoleApplication.run();
+
+        // Assert
+        assertTrue(consoleWriter.outputIncludes("Name: Ryan Chen"));
+        assertTrue(consoleWriter.outputIncludes("Pay Period: 01 March - 31 March"));
+        assertTrue(consoleWriter.outputIncludes("Gross Income: 10000"));
+        assertTrue(consoleWriter.outputIncludes("Income Tax: 2658"));
+        assertTrue(consoleWriter.outputIncludes("Net Income: 7342"));
+        assertTrue(consoleWriter.outputIncludes("Super: 1000"));
     }
 }
