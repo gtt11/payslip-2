@@ -1,6 +1,7 @@
-import Console.Runner;
-import Core.Builder;
-import Core.PayslipGeneratorStandard;
+package Application;
+
+import Core.*;
+import Core.Payslip.*;
 
 import java.io.FileNotFoundException;
 
