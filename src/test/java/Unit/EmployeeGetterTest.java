@@ -106,6 +106,23 @@ public class EmployeeGetterTest {
         };
         createConsoleReader_withTestInput(employeeDetails);
         assertThat(employee.getPaymentEndDate(), is("31 March"));
+
+    }
+    @Test
+    public void createsEmployee_seeksFurtherInputNoNameIsProvided() throws UnsupportedEncodingException {
+        String[] employeeDetails = {
+                "",
+                "Terry",
+                "",
+                "McTerry",
+                anyLastName,
+                anySalary,
+                anySuperRate,
+                anyPaymentStartDate,
+                anyPaymentEndDate
+        };
+        createConsoleReader_withTestInput(employeeDetails);
+        assertEquals("Terry McTerry", employee.getFullName());
     }
 
     @Test

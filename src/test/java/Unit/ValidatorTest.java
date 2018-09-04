@@ -17,6 +17,11 @@ public class ValidatorTest {
     }
 
     @Test
+    public void returnsFalse_WhenNameIsEmpty() {
+        assertFalse(validator.nameInputIsValid(""));
+    }
+
+    @Test
     public void returnsTrue_WhenValidSalaryValueProvided() {
         assertTrue(validator.salaryInputIsValid("65000"));
     }

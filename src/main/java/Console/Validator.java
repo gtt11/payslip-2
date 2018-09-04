@@ -40,4 +40,8 @@ public class Validator {
         }
     }
 
+    public boolean nameInputIsValid(String inputValue) {
+        return !inputValue.equals("");
+    }
+
 }

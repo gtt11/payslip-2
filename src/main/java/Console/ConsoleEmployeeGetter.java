@@ -21,8 +21,8 @@ public class ConsoleEmployeeGetter implements EmployeeGetter {
 
     public Employee getEmployee() {
         output.display("Welcome to the payslip generator!\n");
-        String firstName = requestTextInput("Please enter your first name:");
-        String surname = requestTextInput("Please enter your surname:");
+        String firstName = requestNameInput("Please enter your first name:");
+        String surname = requestNameInput("Please enter your surname:");
         BigDecimal salary = requestSalaryInput("Please enter your annual salary:");
         BigDecimal superRate = requestSuperInput("Please enter your super rate:");
         String paymentStartDate = requestDate("Please enter your payment start date:");
@@ -30,9 +30,10 @@ public class ConsoleEmployeeGetter implements EmployeeGetter {
         return new Employee(firstName, surname, salary, superRate, paymentStartDate, paymentEndDate);
     }
 
-    private String requestTextInput(String question) {
+    private String requestNameInput(String question) {
         output.display(question);
-        return input.getResponse();
+        String inputValue = input.getResponse();
+        return validator.nameInputIsValid(inputValue) ? inputValue : requestNameInput("Invalid selection. " + question);
     }
 
     private BigDecimal requestSalaryInput(String question) {

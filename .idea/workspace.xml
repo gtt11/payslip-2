@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8983ef2-a5f1-4c7b-a01b-5aaad25b82bf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Console/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Console/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console/Builder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EndToEnd/KataExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EndToEnd/KataExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Console/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Console/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Unit/PayslipGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Unit/PayslipGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -51,8 +48,8 @@
       <file leaf-file-name="ConsoleEmployeeGetter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+            <state relative-caret-position="295">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,14 +57,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Validator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Validator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Console/Validator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="435">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
               <folding>
                 <element signature="e#175#176#0" expanded="true" />
                 <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,12 +75,14 @@
       <file leaf-file-name="ValidatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+            <state relative-caret-position="142">
+              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#176#177#0" expanded="true" />
                 <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
                 <element signature="e#347#348#0" expanded="true" />
                 <element signature="e#415#416#0" expanded="true" />
                 <element signature="e#543#544#0" expanded="true" />
@@ -158,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeGetterTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeGetterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2340">
-              <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
+            <state relative-caret-position="434">
+              <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -484,12 +485,12 @@
         <option value="$PROJECT_DIR$/src/test/java/Unit/TaxCalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Integration/CoreTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Unit/PayslipGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Console/Validator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Console/Builder.java" />
         <option value="$PROJECT_DIR$/src/test/java/EndToEnd/KataExampleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Console/Validator.java" />
       </list>
     </option>
   </component>
@@ -720,26 +721,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in payslip-mark-2_test (1)">
+  <component name="RunManager" selected="JUnit.All in payslip-mark-2_test">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="All in payslip-mark-2_test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="payslip-mark-2_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="All in payslip-mark-2_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="payslip-mark-2_test" />
@@ -758,7 +742,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeGetterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="payslip-mark-2_test" />
       <extension name="coverage">
         <pattern>
@@ -770,7 +754,30 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Unit" />
       <option name="MAIN_CLASS_NAME" value="Unit.EmployeeGetterTest" />
-      <option name="METHOD_NAME" value="validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="EmployeeGetterTest.createsEmployee_seeksFurtherInputNoNameIsProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="payslip-mark-2_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Unit" />
+      <option name="MAIN_CLASS_NAME" value="Unit.EmployeeGetterTest" />
+      <option name="METHOD_NAME" value="createsEmployee_seeksFurtherInputNoNameIsProvided" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -781,7 +788,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeGetterTest.createsEmployee_seeksFurtherInputWhenInvalidSuperProvided" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="payslip-mark-2_test" />
       <extension name="coverage">
         <pattern>
@@ -793,7 +800,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Unit" />
       <option name="MAIN_CLASS_NAME" value="Unit.EmployeeGetterTest" />
-      <option name="METHOD_NAME" value="validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided" />
+      <option name="METHOD_NAME" value="createsEmployee_seeksFurtherInputWhenInvalidSuperProvided" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -866,19 +873,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided" />
-      <item itemvalue="JUnit.EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided" />
       <item itemvalue="JUnit.ValidatorTest" />
+      <item itemvalue="JUnit.EmployeeGetterTest.createsEmployee_seeksFurtherInputWhenInvalidSuperProvided" />
+      <item itemvalue="JUnit.EmployeeGetterTest" />
+      <item itemvalue="JUnit.EmployeeGetterTest.createsEmployee_seeksFurtherInputNoNameIsProvided" />
       <item itemvalue="JUnit.All in payslip-mark-2_test" />
-      <item itemvalue="JUnit.All in payslip-mark-2_test (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in payslip-mark-2_test (1)" />
         <item itemvalue="JUnit.All in payslip-mark-2_test" />
+        <item itemvalue="JUnit.EmployeeGetterTest.createsEmployee_seeksFurtherInputNoNameIsProvided" />
+        <item itemvalue="JUnit.EmployeeGetterTest" />
         <item itemvalue="JUnit.ValidatorTest" />
-        <item itemvalue="JUnit.EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided" />
-        <item itemvalue="JUnit.EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided" />
+        <item itemvalue="JUnit.EmployeeGetterTest.createsEmployee_seeksFurtherInputWhenInvalidSuperProvided" />
       </list>
     </recent_temporary>
   </component>
@@ -895,44 +902,44 @@
       <workItem from="1534898607446" duration="45265000" />
       <workItem from="1535095896493" duration="23499000" />
       <workItem from="1535410467622" duration="62492000" />
-      <workItem from="1535948643335" duration="9408000" />
+      <workItem from="1535948643335" duration="10564000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided - 2018.09.04 at 10h 51m 27s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided" configurationId="JUnit" />
+    <history-entry file="All_in_payslip-mark-2_test_(1) - 2018.09.04 at 11h 31m 21s.xml">
+      <configuration name="All in payslip-mark-2_test (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided - 2018.09.04 at 10h 53m 12s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided" configurationId="JUnit" />
+    <history-entry file="EmployeeGetterTest_createsEmployee_seeksFurtherInputWhenInvalidSuperProvided - 2018.09.04 at 11h 39m 38s.xml">
+      <configuration name="EmployeeGetterTest.createsEmployee_seeksFurtherInputWhenInvalidSuperProvided" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided - 2018.09.04 at 10h 54m 02s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided - 2018.09.04 at 10h 54m 23s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenZeroProvided" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided - 2018.09.04 at 10h 55m 02s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNegativeValueProvided" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="EmployeeGetterTest_validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided - 2018.09.04 at 10h 55m 45s.xml">
-      <configuration name="EmployeeGetterTest.validatesConsoleInputForSalary_seeksFurtherInputWhenNonIntegerProvided" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ValidatorTest - 2018.09.04 at 11h 26m 11s.xml">
+    <history-entry file="ValidatorTest - 2018.09.04 at 11h 41m 16s.xml">
       <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ValidatorTest - 2018.09.04 at 11h 26m 34s.xml">
+    <history-entry file="ValidatorTest - 2018.09.04 at 11h 41m 56s.xml">
       <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ValidatorTest - 2018.09.04 at 11h 28m 29s.xml">
+    <history-entry file="ValidatorTest - 2018.09.04 at 11h 46m 00s.xml">
       <configuration name="ValidatorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_payslip-mark-2_test - 2018.09.04 at 11h 29m 11s.xml">
-      <configuration name="All in payslip-mark-2_test" configurationId="JUnit" />
+    <history-entry file="ValidatorTest - 2018.09.04 at 11h 47m 28s.xml">
+      <configuration name="ValidatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeGetterTest - 2018.09.04 at 11h 47m 31s.xml">
+      <configuration name="EmployeeGetterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeGetterTest - 2018.09.04 at 11h 49m 05s.xml">
+      <configuration name="EmployeeGetterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeGetterTest - 2018.09.04 at 11h 49m 46s.xml">
+      <configuration name="EmployeeGetterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeGetterTest_createsEmployee_seeksFurtherInputNoNameIsProvided - 2018.09.04 at 11h 50m 31s.xml">
+      <configuration name="EmployeeGetterTest.createsEmployee_seeksFurtherInputNoNameIsProvided" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140664000" />
+    <option name="totallyTimeSpent" value="141820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="53" width="1920" height="994" extended-state="0" />
@@ -950,16 +957,16 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3880597" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38795987" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32664436" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2664437" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2664437" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3283582" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22470714" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22470714" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32820514" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -1024,7 +1031,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="33" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1314,16 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="48" lean-forward="true" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Unit/PayslipGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -1374,14 +1371,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Console/ConsoleEmployeeGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Unit/ValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="47" lean-forward="true" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        <state relative-caret-position="142">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#176#177#0" expanded="true" />
             <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
             <element signature="e#347#348#0" expanded="true" />
             <element signature="e#415#416#0" expanded="true" />
             <element signature="e#543#544#0" expanded="true" />
@@ -1414,21 +1433,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Console/Validator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="435">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
           <folding>
             <element signature="e#175#176#0" expanded="true" />
             <element signature="e#223#224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Unit/EmployeeGetterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="156" column="31" selection-start-line="156" selection-start-column="31" selection-end-line="156" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
           </folding>
         </state>
       </provider>
