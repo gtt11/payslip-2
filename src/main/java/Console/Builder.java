@@ -13,7 +13,8 @@ public class Builder {
         ConsoleReader consoleReader = new ConsoleReaderStandard();
         ConsoleWriter consoleWriter = new ConsoleWriterStandard();
         ConsolePayslipPresenter payslipWriter = new ConsolePayslipPresenter(consoleWriter);
-        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
+        Validator validator = new Validator(50);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter, validator);
         return new Runner(employeeGetter, payslipGenerator, payslipWriter);
     }
 

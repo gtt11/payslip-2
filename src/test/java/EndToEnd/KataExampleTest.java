@@ -27,7 +27,8 @@ public class KataExampleTest {
         ConsoleWriterAlternateSavesOutput consoleWriter = new ConsoleWriterAlternateSavesOutput();
 
         ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
-        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
+        Validator validator = new Validator(50);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter, validator);
 
         TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Data/tax_brackets.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
@@ -57,7 +58,8 @@ public class KataExampleTest {
         ConsoleWriterAlternateSavesOutput consoleWriter = new ConsoleWriterAlternateSavesOutput();
 
         ConsolePayslipPresenter payslipPresenter = new ConsolePayslipPresenter(consoleWriter);
-        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter);
+        Validator validator = new Validator(50);
+        ConsoleEmployeeGetter employeeGetter = new ConsoleEmployeeGetter(consoleReader, consoleWriter, validator);
 
         TaxBracketLoader taxTaxBracketLoader = new JSONTaxBracketLoader("src/test/java/Data/tax_brackets.json");
         TaxCalculator newTaxCalculator = new MonthlyTaxCalculator(taxTaxBracketLoader);
