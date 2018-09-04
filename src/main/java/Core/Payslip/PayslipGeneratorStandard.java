@@ -9,12 +9,14 @@ import java.math.RoundingMode;
 public class PayslipGeneratorStandard implements PayslipGenerator {
 
     private TaxCalculator taxCalculator;
-    private BigDecimal payPeriodDivisor;
-    private final int quotientScale = 0;
+    private BigDecimal payPeriods;
+
+    private final int decimalPlaces = 0;
+    private final RoundingMode roundingMode = RoundingMode.HALF_UP;
 
     public PayslipGeneratorStandard(TaxCalculator taxCalculator) {
         this.taxCalculator = taxCalculator;
-        this.payPeriodDivisor = taxCalculator.getPayPeriodDivisor();
+        this.payPeriods = taxCalculator.getAnnualPayPeriods();
     }
 
     public Payslip getPayslip(Employee employee) {
@@ -33,7 +35,7 @@ public class PayslipGeneratorStandard implements PayslipGenerator {
 
     private BigDecimal getGrossIncomeForPayPeriod(Employee employee) {
         BigDecimal annualSalary = employee.getSalary();
-        BigDecimal roundedIncomeForPayPeriod = annualSalary.divide(payPeriodDivisor, quotientScale, RoundingMode.HALF_UP);
+        BigDecimal roundedIncomeForPayPeriod = annualSalary.divide(payPeriods, decimalPlaces, roundingMode);
         return roundedIncomeForPayPeriod;
     }
 
@@ -44,7 +46,7 @@ public class PayslipGeneratorStandard implements PayslipGenerator {
 
     private BigDecimal getSuperForPayPeriod(Employee employee, BigDecimal grossIncome) {
         BigDecimal superRate = employee.getSuperRate();
-        BigDecimal roundedSuperForPayPeriod = grossIncome.multiply(superRate).divide(new BigDecimal("100"), quotientScale, RoundingMode.HALF_UP);
+        BigDecimal roundedSuperForPayPeriod = grossIncome.multiply(superRate).divide(new BigDecimal("100"), decimalPlaces, roundingMode);
         return roundedSuperForPayPeriod;
     }
 

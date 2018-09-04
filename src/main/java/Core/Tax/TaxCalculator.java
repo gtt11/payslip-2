@@ -6,6 +6,6 @@ public interface TaxCalculator {
 
     BigDecimal calculateIncomeTax(BigDecimal grossIncome);
 
-    BigDecimal getPayPeriodDivisor();
+    BigDecimal getAnnualPayPeriods();
 
 }

@@ -12,7 +12,7 @@ public class TaxCalculatorAlternateReturns922 implements TaxCalculator {
     }
 
     @Override
-    public BigDecimal getPayPeriodDivisor() {
+    public BigDecimal getAnnualPayPeriods() {
         return new BigDecimal("12");
     }
 }
